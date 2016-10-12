@@ -37,7 +37,7 @@ RUN git clone git@github.com:xybu/file.git
 WORKDIR file
 ARG CC="afl-clang-fast"
 ARG ASM="afl-clang-fast"
-ARG CFLAGS="-g -O0 -fsanitize=address"
+ARG CFLAGS="-g -O0 -fsanitize=address -fno-omit-frame-pointer"
 ARG CPPFLAGS=CFLAGS
 RUN autoreconf -f -i
 RUN ./configure --disable-silent-rules --enable-static
