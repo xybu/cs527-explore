@@ -49,7 +49,7 @@ RUN tar xvzf suricata-$SURICATA_VER.tar.gz
 WORKDIR suricata-$SURICATA_VER
 ARG CC="afl-clang-fast"
 ARG CFLAGS="-fsanitize=address -fno-omit-frame-pointer -g -O0"
-RUN ./configure --enable-nfqueue --enable-unittests --enable-profiling --prefix=/usr --sysconfdir=/etc --localstatedir=/var --enable-afl --disable-shared  --with-libmagic-include=/root/file/src --with-libmagic-libraries=/root/file/src
+RUN ./configure --enable-nfqueue --enable-unittests --enable-profiling --prefix=/usr --sysconfdir=/etc --localstatedir=/var --enable-afl --disable-shared  --with-libmagic-includes=/root/file/src --with-libmagic-libraries=/root/file/src
 RUN make -j$NPROC
 RUN make install-full
 RUN ldconfig
