@@ -38,7 +38,7 @@ WORKDIR file
 ARG CC="afl-gcc"
 ARG ASM="afl-gcc"
 ARG CFLAGS="-g -O0 -fsanitize=address"
-RUN ./configure --disable-silent-rules --enable-static --disable-shared
+RUN ./configure --disable-silent-rules --enable-static
 RUN make -j$NPROC
 RUN make -C tests check
 
