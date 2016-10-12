@@ -1,3 +1,5 @@
+libmagic-fuzz/test_magic
+
 # Object files
 *.o
 *.ko
