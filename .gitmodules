@@ -1,0 +1,3 @@
+[submodule "thirdparty/file"]
+	path = thirdparty/file
+	url = https://github.com/xybu/file
