@@ -35,8 +35,8 @@ RUN make install
 WORKDIR /root
 RUN git clone git@github.com:xybu/file.git
 WORKDIR file
-ARG CC="afl-gcc"
-ARG ASM="afl-gcc"
+ARG CC="afl-clang-fast"
+ARG ASM="afl-clang-fast"
 ARG CFLAGS="-g -O0 -fsanitize=address"
 RUN ./configure --disable-silent-rules --enable-static
 RUN make -j$NPROC
