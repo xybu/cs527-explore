@@ -18,7 +18,7 @@ build-essential make autoconf automake libtool libpcap-dev libnet1-dev \
 libyaml-0-2 libyaml-dev zlib1g zlib1g-dev libcap-ng-dev \
 libjansson-dev pkg-config libgeoip-dev libnetfilter-queue-dev \
 libnetfilter-queue-dev libnetfilter-queue1 libnfnetlink-dev libnfnetlink0 \
-clang llvm g++ libtool-bin bison m4 git mercurial
+clang llvm g++ libtool-bin bison m4 git mercurial tmux
 
 ### Install AFL.
 WORKDIR /root
@@ -39,6 +39,7 @@ ARG CC="afl-clang-fast"
 ARG ASM="afl-clang-fast"
 ARG CFLAGS="-g -O0 -fsanitize=address"
 ARG CPPFLAGS=CFLAGS
+RUN autoreconf -f -i
 RUN ./configure --disable-silent-rules --enable-static
 RUN make -j$NPROC
 RUN make -C tests check
