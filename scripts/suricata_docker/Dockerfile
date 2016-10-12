@@ -5,6 +5,9 @@ ARG SURICATA_VER=3.1.2
 ARG AFL_VER=2.35b
 ARG NPROC=4
 
+ENV ac_cv_func_realloc_0_nonnull=yes
+ENV ac_cv_func_malloc_0_nonnull=yes
+
 # Install dependencies.
 # https://redmine.openinfosecfoundation.org/projects/suricata/wiki/Ubuntu_Installation
 RUN apt update
@@ -12,10 +15,10 @@ RUN apt upgrade -y
 RUN apt install -y wget
 RUN apt install -y libpcre3 libpcre3-dbg libpcre3-dev \
 build-essential make autoconf automake libtool libpcap-dev libnet1-dev \
-libyaml-0-2 libyaml-dev zlib1g zlib1g-dev libmagic-dev libcap-ng-dev \
+libyaml-0-2 libyaml-dev zlib1g zlib1g-dev libcap-ng-dev \
 libjansson-dev pkg-config libgeoip-dev libnetfilter-queue-dev \
 libnetfilter-queue-dev libnetfilter-queue1 libnfnetlink-dev libnfnetlink0 \
-clang llvm g++ libtool-bin bison m4
+clang llvm g++ libtool-bin bison m4 git mercurial
 
 ### Install AFL.
 WORKDIR /tmp
@@ -28,15 +31,25 @@ RUN make -j$NPROC
 WORKDIR /tmp/afl-$AFL_VER
 RUN make install
 
+### Install libmagic from source.
+WORKDIR /tmp
+RUN git clone git@github.com:xybu/file.git
+WORKDIR file
+ARG CC="afl-gcc"
+ARG ASM="afl-gcc"
+ARG CFLAGS="-g -O0 -fsanitize=address"
+RUN ./configure --disable-silent-rules
+RUN make -j$NPROC
+RUN make -C tests check
+RUN make install
+
 ### Install Suricata with AFL enabled.
 WORKDIR /tmp
 RUN wget http://www.openinfosecfoundation.org/download/suricata-$SURICATA_VER.tar.gz
 RUN tar xvzf suricata-$SURICATA_VER.tar.gz
 WORKDIR suricata-$SURICATA_VER
-ARG ac_cv_func_realloc_0_nonnull=yes
-ARG ac_cv_func_malloc_0_nonnull=yes
 ARG CC="afl-clang-fast"
-ARG CFLAGS="-fsanitize=address -fno-omit-frame-pointer"
+ARG CFLAGS="-fsanitize=address -fno-omit-frame-pointer -g -O0"
 RUN ./configure --enable-nfqueue --enable-unittests --enable-profiling --prefix=/usr --sysconfdir=/etc --localstatedir=/var --enable-afl --disable-shared
 RUN make -j$NPROC
 RUN make install-full
