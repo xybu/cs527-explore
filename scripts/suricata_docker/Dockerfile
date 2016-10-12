@@ -21,7 +21,7 @@ libnetfilter-queue-dev libnetfilter-queue1 libnfnetlink-dev libnfnetlink0 \
 clang llvm g++ libtool-bin bison m4 git mercurial
 
 ### Install AFL.
-WORKDIR /tmp
+WORKDIR /root
 RUN wget http://lcamtuf.coredump.cx/afl/releases/afl-$AFL_VER.tgz
 RUN tar xvzf afl-$AFL_VER.tgz
 WORKDIR afl-$AFL_VER
@@ -32,7 +32,7 @@ WORKDIR /tmp/afl-$AFL_VER
 RUN make install
 
 ### Install libmagic from source.
-WORKDIR /tmp
+WORKDIR /root
 RUN git clone git@github.com:xybu/file.git
 WORKDIR file
 ARG CC="afl-gcc"
@@ -41,16 +41,15 @@ ARG CFLAGS="-g -O0 -fsanitize=address"
 RUN ./configure --disable-silent-rules
 RUN make -j$NPROC
 RUN make -C tests check
-RUN make install
 
 ### Install Suricata with AFL enabled.
-WORKDIR /tmp
+WORKDIR /root
 RUN wget http://www.openinfosecfoundation.org/download/suricata-$SURICATA_VER.tar.gz
 RUN tar xvzf suricata-$SURICATA_VER.tar.gz
 WORKDIR suricata-$SURICATA_VER
 ARG CC="afl-clang-fast"
 ARG CFLAGS="-fsanitize=address -fno-omit-frame-pointer -g -O0"
-RUN ./configure --enable-nfqueue --enable-unittests --enable-profiling --prefix=/usr --sysconfdir=/etc --localstatedir=/var --enable-afl --disable-shared
+RUN ./configure --enable-nfqueue --enable-unittests --enable-profiling --prefix=/usr --sysconfdir=/etc --localstatedir=/var --enable-afl --disable-shared  --with-libmagic-include=/root/file/src --with-libmagic-libraries=/root/file/src
 RUN make -j$NPROC
 RUN make install-full
 RUN ldconfig
