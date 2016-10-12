@@ -38,7 +38,7 @@ WORKDIR file
 ARG CC="afl-gcc"
 ARG ASM="afl-gcc"
 ARG CFLAGS="-g -O0 -fsanitize=address"
-RUN ./configure --disable-silent-rules
+RUN ./configure --disable-silent-rules --enable-static --disable-shared
 RUN make -j$NPROC
 RUN make -C tests check
 
@@ -49,6 +49,7 @@ RUN tar xvzf suricata-$SURICATA_VER.tar.gz
 WORKDIR suricata-$SURICATA_VER
 ARG CC="afl-clang-fast"
 ARG CFLAGS="-fsanitize=address -fno-omit-frame-pointer -g -O0"
+ARG CPPFLAGS=CFLAGS
 RUN ./configure --enable-nfqueue --enable-unittests --enable-profiling --prefix=/usr --sysconfdir=/etc --localstatedir=/var --enable-afl --disable-shared  --with-libmagic-includes=/root/file/src --with-libmagic-libraries=/root/file/src/.libs
 RUN make -j$NPROC
 RUN make install-full
