@@ -38,9 +38,11 @@ WORKDIR file
 ARG CC="afl-clang-fast"
 ARG ASM="afl-clang-fast"
 ARG CFLAGS="-g -O0 -fsanitize=address"
+ARG CPPFLAGS=CFLAGS
 RUN ./configure --disable-silent-rules --enable-static
 RUN make -j$NPROC
 RUN make -C tests check
+RUN make install
 
 ### Install Suricata with AFL enabled.
 WORKDIR /root
