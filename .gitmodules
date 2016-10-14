@@ -1,3 +1,6 @@
 [submodule "thirdparty/file"]
 	path = thirdparty/file
 	url = https://github.com/xybu/file
+[submodule "thirdparty/suricata"]
+	path = thirdparty/suricata
+	url = git@github.com:xybu/suricata.git
