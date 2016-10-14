@@ -4,3 +4,6 @@
 [submodule "thirdparty/suricata"]
 	path = thirdparty/suricata
 	url = git@github.com:xybu/suricata.git
+[submodule "thirdparty/hyperscan"]
+	path = thirdparty/hyperscan
+	url = git@github.com:xybu/hyperscan.git
