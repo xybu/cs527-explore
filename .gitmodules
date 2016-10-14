@@ -7,3 +7,6 @@
 [submodule "thirdparty/hyperscan"]
 	path = thirdparty/hyperscan
 	url = git@github.com:xybu/hyperscan.git
+[submodule "thirdparty/afl"]
+	path = thirdparty/afl
+	url = git@github.com:mirrorer/afl.git
