@@ -1,0 +1,68 @@
+This is Suricata version 3.2dev (rev c6134e0)
+Features: UNITTESTS NFQ PCAP_SET_BUFF LIBPCAP_VERSION_MAJOR=1 AF_PACKET HAVE_PACKET_FANOUT LIBCAP_NG LIBNET1.1 HAVE_HTP_URI_NORMALIZE_HOOK PCRE_JIT HAVE_LIBJANSSON PROFILING TLS 
+SIMD support: SSE_4_2 SSE_4_1 SSE_3 
+Atomic intrisics: 1 2 4 8 16 byte(s)
+64-bits, Little-endian architecture
+GCC version 4.2.1 Compatible Clang 3.9.0 (tags/RELEASE_390/final), C version 199901
+compiled with _FORTIFY_SOURCE=0
+L1 cache line size (CLS)=64
+thread local storage method: __thread
+compiled with LibHTP v0.5.22, linked against LibHTP v0.5.22
+
+Suricata Configuration:
+  AF_PACKET support:                       yes
+  PF_RING support:                         no
+  NFQueue support:                         yes
+  NFLOG support:                           no
+  IPFW support:                            no
+  Netmap support:                          no
+  DAG enabled:                             no
+  Napatech enabled:                        no
+
+  Unix socket enabled:                     yes
+  Detection enabled:                       yes
+
+  libnss support:                          no
+  libnspr support:                         no
+  libjansson support:                      yes
+  hiredis support:                         no
+  Prelude support:                         no
+  PCRE jit:                                yes
+  LUA support:                             no
+  libluajit:                               no
+  libgeoip:                                no
+  Non-bundled htp:                         no
+  Old barnyard2 support:                   no
+  CUDA enabled:                            no
+  Hyperscan support:                       no
+  Libnet support:                          yes
+
+  Suricatasc install:                      yes
+
+  Profiling enabled:                       yes
+  Profiling locks enabled:                 no
+
+Development settings:
+  Coccinelle / spatch:                     no
+  Unit tests enabled:                      yes
+  Debug output enabled:                    no
+  Debug validation enabled:                no
+
+Generic build parameters:
+  Installation prefix:                     /usr
+  Configuration directory:                 /etc/suricata/
+  Log directory:                           /var/log/suricata/
+
+  --prefix                                 /usr
+  --sysconfdir                             /etc
+  --localstatedir                          /var
+
+  Host:                                    x86_64-pc-linux-gnu
+  Compiler:                                afl-clang-fast (exec name) / clang (real)
+  GCC Protect enabled:                     no
+  GCC march native enabled:                yes
+  GCC Profile enabled:                     no
+  Position Independent Executable enabled: no
+  CFLAGS                                   -fsanitize=address -fno-omit-frame-pointer -g -O0 -march=native
+  PCAP_CFLAGS                               -I/usr/include
+  SECCFLAGS                                
