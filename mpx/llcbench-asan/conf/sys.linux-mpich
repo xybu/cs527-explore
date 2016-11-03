@@ -1,7 +1,7 @@
 # Linux-mpich sys.def
 
-MPX_CFLAGS = -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers
-MPX_LIBS = -lmpx
+MPX_CFLAGS = -fsanitize=address
+MPX_LIBS =
 
 # Blasbench values
 

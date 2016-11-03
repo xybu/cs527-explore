@@ -39,7 +39,7 @@ CB_Datatype = DOUBLE
 CB_SecondsPerIteration = 5
 
 # The number of times each test is run.
-CB_RepeatCount = 1
+CB_RepeatCount = 10
 
 # Log base 2 of the maximum problem size tested in bytes
 CB_Memsize = 29
