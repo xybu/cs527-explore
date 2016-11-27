@@ -1,0 +1,6 @@
+cd cachebench; make script
+make[1]: Entering directory '/home/xb/cs527-explore/mpx/llcbench/cachebench'
+
+Datafiles and GNUplot scripts are located in the results directory.
+
+make[1]: Leaving directory '/home/xb/cs527-explore/mpx/llcbench/cachebench'

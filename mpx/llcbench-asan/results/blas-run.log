@@ -1,0 +1,12 @@
+cd blasbench; make run
+make[1]: Entering directory '/home/xb/cs527-explore/mpx/llcbench-asan/blasbench'
+Measuring DAXPY...
+./vblasbench  -i 1 -e 1 -m 20 -x 2 -c -d -o -v > results/giga-x86_64_blas_vdaxpy.dat
+Measuring DGEMV...
+./vblasbench  -i 1 -e 1 -m 29 -x 2 -c -d -o -a > results/giga-x86_64_blas_vdgemv.dat
+Measuring DGEMM...
+./vblasbench  -i 1 -e 1 -m 29 -x 2 -c -d -o -t > results/giga-x86_64_blas_vdgemm.dat
+
+Datafiles and GNUPlot scripts are located in the results directory.
+
+make[1]: Leaving directory '/home/xb/cs527-explore/mpx/llcbench-asan/blasbench'

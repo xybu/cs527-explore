@@ -1,6 +1,5 @@
 cd cachebench; make run
 make[1]: Entering directory '/home/xb/cs527-explore/mpx/llcbench/cachebench'
-ln -s ../results results
 Measuring Read...
 ./cachebench  -m 29 -e 10 -x 2 -d 10 -r > results/giga-x86_64_cache_read.dat
 Measuring Write...

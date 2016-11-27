@@ -1,0 +1,7 @@
+cd blasbench; make graph
+make[1]: Entering directory '/home/xb/cs527-explore/mpx/llcbench-asan/blasbench'
+cd results; gnuplot < giga-x86_64_blas.gp > giga-x86_64_blas.ps
+
+Vendor BLAS graph is in results/giga-x86_64_blas.ps
+
+make[1]: Leaving directory '/home/xb/cs527-explore/mpx/llcbench-asan/blasbench'

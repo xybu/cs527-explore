@@ -1,0 +1,7 @@
+cd cachebench; make graph
+make[1]: Entering directory '/home/xb/cs527-explore/mpx/llcbench-asan/cachebench'
+cd results; gnuplot < giga-x86_64_cache.gp > giga-x86_64_cache.ps
+
+Memory heirarchy graph is in results/giga-x86_64_cache.ps
+
+make[1]: Leaving directory '/home/xb/cs527-explore/mpx/llcbench-asan/cachebench'
