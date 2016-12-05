@@ -1,0 +1,503 @@
+spec.cpu2006.hw_avail: --
+spec.cpu2006.hw_cpu_char: 
+spec.cpu2006.hw_cpu_mhz: --
+spec.cpu2006.hw_cpu_name: Intel Core i7-6700K
+spec.cpu2006.hw_disk: 357 GB  add more disk info here
+spec.cpu2006.hw_fpu: --
+spec.cpu2006.hw_memory000: 60.614 GB fixme: If using DDR3, format is:
+spec.cpu2006.hw_memory001: 'N GB (M x N GB nRxn PCn-nnnnnR-n, ECC)'
+spec.cpu2006.hw_model: --
+spec.cpu2006.hw_nchips: 1
+spec.cpu2006.hw_ncores: --
+spec.cpu2006.hw_ncoresperchip: --
+spec.cpu2006.hw_ncpuorder: --
+spec.cpu2006.hw_nthreadspercore: --
+spec.cpu2006.hw_ocache: --
+spec.cpu2006.hw_other: --
+spec.cpu2006.hw_pcache: --
+spec.cpu2006.hw_scache: --
+spec.cpu2006.hw_tcache: --
+spec.cpu2006.hw_vendor: --
+spec.cpu2006.license_num: --
+spec.cpu2006.prepared_by: xb  (is never output, only tags rawfile)
+spec.cpu2006.sw_avail: --
+spec.cpu2006.sw_base_ptrsize: --
+spec.cpu2006.sw_compiler: --
+spec.cpu2006.sw_file: ext4
+spec.cpu2006.sw_os000: Ubuntu 16.10
+spec.cpu2006.sw_os001: 4.8.0-27-generic
+spec.cpu2006.sw_other: --
+spec.cpu2006.sw_parallel_other: --
+spec.cpu2006.sw_peak_ptrsize: Not Applicable
+spec.cpu2006.sw_state: Run level 5 (add definition here)
+spec.cpu2006.test_date: Dec-2016
+spec.cpu2006.test_sponsor: --
+spec.cpu2006.tester: --
+spec.cpu2006.notes_plat_sysinfo_000:  Sysinfo program /home/xb/spec/Docs/sysinfo
+spec.cpu2006.notes_plat_sysinfo_005:  $Rev: 6775 $ $Date:: 2011-08-16 #$ 8787f7622badcf24e01c368b1db4377c
+spec.cpu2006.notes_plat_sysinfo_010:  running on giga Sat Dec  3 21:57:02 2016
+spec.cpu2006.notes_plat_sysinfo_015: 
+spec.cpu2006.notes_plat_sysinfo_020:  This section contains SUT (System Under Test) info as seen by
+spec.cpu2006.notes_plat_sysinfo_025:  some common utilities.  To remove or add to this section, see:
+spec.cpu2006.notes_plat_sysinfo_030:    http://www.spec.org/cpu2006/Docs/config.html#sysinfo
+spec.cpu2006.notes_plat_sysinfo_035: 
+spec.cpu2006.notes_plat_sysinfo_040:  From /proc/cpuinfo
+spec.cpu2006.notes_plat_sysinfo_045:     model name : Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz
+spec.cpu2006.notes_plat_sysinfo_050:        1 "physical id"s (chips)
+spec.cpu2006.notes_plat_sysinfo_055:        8 "processors"
+spec.cpu2006.notes_plat_sysinfo_060:     cores, siblings (Caution: counting these is hw and system dependent.  The
+spec.cpu2006.notes_plat_sysinfo_065:     following excerpts from /proc/cpuinfo might not be reliable.  Use with
+spec.cpu2006.notes_plat_sysinfo_070:     caution.)
+spec.cpu2006.notes_plat_sysinfo_075:        cpu cores : 4
+spec.cpu2006.notes_plat_sysinfo_080:        siblings  : 8
+spec.cpu2006.notes_plat_sysinfo_085:        physical 0: cores 0 1 2 3
+spec.cpu2006.notes_plat_sysinfo_090:     cache size : 8192 KB
+spec.cpu2006.notes_plat_sysinfo_095: 
+spec.cpu2006.notes_plat_sysinfo_100:  From /proc/meminfo
+spec.cpu2006.notes_plat_sysinfo_105:     MemTotal:       63558700 kB
+spec.cpu2006.notes_plat_sysinfo_110:     HugePages_Total:       0
+spec.cpu2006.notes_plat_sysinfo_115:     Hugepagesize:       2048 kB
+spec.cpu2006.notes_plat_sysinfo_120: 
+spec.cpu2006.notes_plat_sysinfo_125:  /usr/bin/lsb_release -d
+spec.cpu2006.notes_plat_sysinfo_130:     Ubuntu 16.10
+spec.cpu2006.notes_plat_sysinfo_135: 
+spec.cpu2006.notes_plat_sysinfo_140:  From /etc/*release* /etc/*version*
+spec.cpu2006.notes_plat_sysinfo_145:     debian_version: stretch/sid
+spec.cpu2006.notes_plat_sysinfo_150:     os-release:
+spec.cpu2006.notes_plat_sysinfo_155:        NAME="Ubuntu"
+spec.cpu2006.notes_plat_sysinfo_160:        VERSION="16.10 (Yakkety Yak)"
+spec.cpu2006.notes_plat_sysinfo_165:        ID=ubuntu
+spec.cpu2006.notes_plat_sysinfo_170:        ID_LIKE=debian
+spec.cpu2006.notes_plat_sysinfo_175:        PRETTY_NAME="Ubuntu 16.10"
+spec.cpu2006.notes_plat_sysinfo_180:        VERSION_ID="16.10"
+spec.cpu2006.notes_plat_sysinfo_185:        HOME_URL="http://www.ubuntu.com/"
+spec.cpu2006.notes_plat_sysinfo_190:        SUPPORT_URL="http://help.ubuntu.com/"
+spec.cpu2006.notes_plat_sysinfo_195: 
+spec.cpu2006.notes_plat_sysinfo_200:  uname -a:
+spec.cpu2006.notes_plat_sysinfo_205:     Linux giga 4.8.0-27-generic #29-Ubuntu SMP Thu Oct 20 21:03:13 UTC 2016
+spec.cpu2006.notes_plat_sysinfo_210:     x86_64 x86_64 x86_64 GNU/Linux
+spec.cpu2006.notes_plat_sysinfo_215: 
+spec.cpu2006.notes_plat_sysinfo_220:  run-level 5 Dec 1 21:13
+spec.cpu2006.notes_plat_sysinfo_225: 
+spec.cpu2006.notes_plat_sysinfo_230:  SPEC is set to: /home/xb/spec
+spec.cpu2006.notes_plat_sysinfo_235:     Filesystem     Type  Size  Used Avail Use% Mounted on
+spec.cpu2006.notes_plat_sysinfo_240:     /dev/sda5      ext4  357G  339G  423M 100% /
+spec.cpu2006.notes_plat_sysinfo_245: 
+spec.cpu2006.notes_plat_sysinfo_250:  (End of data from sysinfo program)
+# =============== do not edit below this point ===================
+spec.cpu2006.rawhash: 0df6cbec1661b26ad041425ec7de25b9
+spec.cpu2006.base_copies: 1
+spec.cpu2006.basemean: --
+spec.cpu2006.basepeak: 0
+spec.cpu2006.cfidx000: &8AAABepCWmgxMUFZJlNZBUbvtQABg5uAAAR/8AAAv2/esEABsDOAxpiMI0wAAA1HpEp/7VJqgABo
+spec.cpu2006.cfidx001: Aif6pKHlBo0AANAioJppihoT0QGZTPHVAznOc6hoAAAAAAAAAAAAAMYxh4kknEXTr/Xd4WOW6TTa
+spec.cpu2006.cfidx002: vdWbqkk6V653ve97AAAAAM3AMnZze171XNYVljGKSVIAM8K8lWSqq0AEUjbqSSSTVqqqSAA4Aqyq
+spec.cpu2006.cfidx003: mk3XIAaAAAAAzcA1rTsm2lJJJxI7JtpSSScSOybai1rWtfRe80iZmInirPhXSAAAAAAAAntOfHHz
+spec.cpu2006.cfidx004: SkRSemREZIiqg13lBQdr8vfpQcv2mUKP3iRnnxvblxUmRooNtLqD78+g6XUGu+JGvNQeNtp8zoTi
+spec.cpu2006.cfidx005: ZKDhQcKDOWOpQ1UGsQRrSOtsaWCPfRQc/Cg97SukFBpZQdYWUHFLk+xSDALHEVBv/i7kinChIAqN
+spec.cpu2006.cfidx006: 32o=
+spec.cpu2006.errors000: 'reportable' flag not set during run
+spec.cpu2006.errors001: 465.tonto (base) did not have enough runs!
+spec.cpu2006.errors002: 453.povray (base) did not have enough runs!
+spec.cpu2006.errors003: 444.namd (base) did not have enough runs!
+spec.cpu2006.errors004: 416.gamess (base) did not have enough runs!
+spec.cpu2006.errors005: 436.cactusADM (base) did not have enough runs!
+spec.cpu2006.errors006: 459.GemsFDTD (base) did not have enough runs!
+spec.cpu2006.errors007: 450.soplex (base) did not have enough runs!
+spec.cpu2006.errors008: 437.leslie3d (base) did not have enough runs!
+spec.cpu2006.errors009: 447.dealII (base) did not have enough runs!
+spec.cpu2006.errors010: 481.wrf (base) did not have enough runs!
+spec.cpu2006.errors011: 433.milc (base) did not have enough runs!
+spec.cpu2006.errors012: 410.bwaves (base) did not have enough runs!
+spec.cpu2006.errors013: 435.gromacs (base) did not have enough runs!
+spec.cpu2006.errors014: 482.sphinx3 (base) did not have enough runs!
+spec.cpu2006.errors015: 434.zeusmp (base) did not have enough runs!
+spec.cpu2006.errors016: 470.lbm (base) did not have enough runs!
+spec.cpu2006.errors017: 454.calculix (base) did not have enough runs!
+spec.cpu2006.errors018: 465.tonto (base) had invalid runs!
+spec.cpu2006.errors019: 453.povray (base) had invalid runs!
+spec.cpu2006.errors020: 444.namd (base) had invalid runs!
+spec.cpu2006.errors021: 416.gamess (base) had invalid runs!
+spec.cpu2006.errors022: 436.cactusADM (base) had invalid runs!
+spec.cpu2006.errors023: 459.GemsFDTD (base) had invalid runs!
+spec.cpu2006.errors024: 450.soplex (base) had invalid runs!
+spec.cpu2006.errors025: 437.leslie3d (base) had invalid runs!
+spec.cpu2006.errors026: 447.dealII (base) had invalid runs!
+spec.cpu2006.errors027: 481.wrf (base) had invalid runs!
+spec.cpu2006.errors028: 410.bwaves (base) had invalid runs!
+spec.cpu2006.errors029: 435.gromacs (base) had invalid runs!
+spec.cpu2006.errors030: 434.zeusmp (base) had invalid runs!
+spec.cpu2006.errors031: 454.calculix (base) had invalid runs!
+spec.cpu2006.errors032: Input set must be 'ref' for a valid run (set to 'test' for this run)
+spec.cpu2006.errors033: Run of 410.bwaves (base) was not valid; status is CE
+spec.cpu2006.errors034: Run of 416.gamess (base) was not valid; status is CE
+spec.cpu2006.errors035: Run of 434.zeusmp (base) was not valid; status is CE
+spec.cpu2006.errors036: Run of 435.gromacs (base) was not valid; status is CE
+spec.cpu2006.errors037: Run of 436.cactusADM (base) was not valid; status is CE
+spec.cpu2006.errors038: Run of 437.leslie3d (base) was not valid; status is CE
+spec.cpu2006.errors039: Run of 444.namd (base) was not valid; status is CE
+spec.cpu2006.errors040: Run of 447.dealII (base) was not valid; status is CE
+spec.cpu2006.errors041: Run of 450.soplex (base) was not valid; status is CE
+spec.cpu2006.errors042: Run of 453.povray (base) was not valid; status is CE
+spec.cpu2006.errors043: Run of 454.calculix (base) was not valid; status is CE
+spec.cpu2006.errors044: Run of 459.GemsFDTD (base) was not valid; status is CE
+spec.cpu2006.errors045: Run of 465.tonto (base) was not valid; status is CE
+spec.cpu2006.errors046: Run of 481.wrf (base) was not valid; status is CE
+spec.cpu2006.ext: mpx_findbug
+spec.cpu2006.idle_avg_watts: --
+spec.cpu2006.invalid: 1
+spec.cpu2006.lognum: 008
+spec.cpu2006.mach: default
+spec.cpu2006.mean_anyway: 0
+spec.cpu2006.metric: CFP2006
+spec.cpu2006.name: fp
+spec.cpu2006.peakmean: Not Run
+spec.cpu2006.power: 0
+spec.cpu2006.rate: 0
+spec.cpu2006.rawconfig000: @eNq9WPtv4joW/j1/xVHbq6FzG0jCs0hI26HMDJo+EI9VZ1eryEkM8W3iZGOn0PvX77GTAp1rZh/a
+spec.cpu2006.rawconfig001: 3fxAwPb5ztM+nzmHKX/JQiJZxiHM0pTwCBLG6dA6h1acpbS1C1oip2ErYLxVlFx9BzuENN/5a8aj
+spec.cpu2006.rawconfig002: oNyATQBnwJ6CnYBtC/Y7BUmFBJuDC+scsbJS5qX0iyyTsCUCOL5LQSNYZwXImAmFYJ3/Fx8rzTiT
+spec.cpu2006.rawconfig003: WeFvC5LntIARAFzUPu4nlTuo2byIbXhWUJ8WRVYInHqlwpIlp7B/RhAQQS26k3A8eBQcq/Yc/UyJ
+spec.cpu2006.rawconfig004: xDkiwitYhAWl3CponhWSBAmt5FxLUooCByStklI08W24GhOyYCHGs+QRK/wXWrD1K045Vkqe6Toh
+spec.cpu2006.rawconfig005: G2Wv/ZvnWFZE16RM5OjEe2iNxwp1E4YK3hYyGm14ObgGO0U/wF6HMQ2f7TxjXNLCDjLUKdQ6rJrQ
+spec.cpu2006.rawconfig006: TligV737WUcTVyV6Mu11wMY6SUkRxiOOK1+oNX56Ump//RWOn/+x0snTcn7j300/LWBkfR4f5YyG
+spec.cpu2006.rawconfig007: cfb/sGCfD1U5hmQ8zpbT++lfJtoo+7Gt4rQfq0b+CcTscb68+TS9my6/K4HbxWwy9sezlX8363Us
+spec.cpu2006.rawconfig008: q+M4TbQyCShHq05XxRHMe5Tpw+rJf9JQPa+Jrv+9JFyW6X+KhTiDdnNHEsLDIH3+CczT00+BwGY8
+spec.cpu2006.rawconfig009: TMqIgtoefNOMEbrTb0aUJNPpv4H7I8zxSIQOH4+EOIRIFh5yy5jieZYk2RalQFAp8S1gSwsKWSAJ
+spec.cpu2006.rawconfig010: nqsRBK/qqONqxQd1+qhUwMVfZZb/rXWbhaIlXgXj6+yDtbcPD0sq/Dwh0q8nfcdxMLeL6hfkRbYp
+spec.cpu2006.rawconfig011: SPrDiX2MZsboIsbFnL4Modfvd+ECLm6JpMMheI7r2s7AdntwfgGD/qC/7vc8LyBRuPY61HHDdm8Q
+spec.cpu2006.rawconfig012: uFHQaff7oRHcVQa+eYrdZcM2BBZ4BN5iA4E2eO6w2x86ntLVMyOgecYJT0EvVdMQNKxbF1fhFbBY
+spec.cpu2006.rawconfig013: LaGBYZE0hRWP8ERfYiO6BB0mogQoxxSYYVU4BEZQd0JELSVLmGRUNAGWGRQ0zV4wkwWQKAKZVX2r
+spec.cpu2006.rawconfig014: NuFKQZtT1XZ0W4mlzIet1na7bar0NLNi0wrz0nOcXpUqdGLNsNpkmpz/LG3tU3HpKEWfiwwLASsi
+spec.cpu2006.rawconfig015: VOgnQTpdbRSkWUQT4AS9HiIZkDRpzC9hjH2vsbzHuPXtXt9xvgFuMvgTdJqO8+Xr70bEbuWmelw4
+spec.cpu2006.rawconfig016: y2McD0kCLDoT0AhjlotLs1x3LzdAOTScCoEN98y4uldrCdFCgUFnQaI3WWNMSpWHIc6UXG08TA8V
+spec.cpu2006.rawconfig017: FDBF8RYUrxFVWUQ0p1gZXKqsxtSspbbpsJvpLqRFLgWs/xBfSNkmlprSBBSrJGGqoyP6CtVvmYyN
+spec.cpu2006.rawconfig018: KvpvjlR2N83B6R+Cg9oqrzFRHePiwSED+7jg4oF58QF5nytnWGtwMIUetI2C13vDsUOCJnuow732
+spec.cpu2006.rawconfig019: 4Nsns8CJenWdH+o1pempenWd2tx7mi4zSZJhbXuv3e0OsELh2ajcdWtrv5YbOiMbnH8n7piFugeh
+spec.cpu2006.rawconfig020: XAmhk28SntMZnFKmDibzhAJslaLQNDoRgY9lQrF7gx0ZBeozA1YBFnMJbq/pmk09dRi4R4cBlWHr
+spec.cpu2006.rawconfig021: Y63wY/0TKaPAsvtolq39j2jACPfrtUPVD1E4bglmtvrtCMiEXasbmtcdau/h5n4yOqvcNO54t3eo
+spec.cpu2006.rawconfig022: 6j9P5ovp48PoTMcDGt/J8zOVr4DvyxPCB03T21Gp1RgX9p2jhUgnvk1Glffm1QfY2XyyXH73j/2o
+spec.cpu2006.rawconfig023: 0mU2aPAHb3w07OxnEgddXx/vJ/5qfjc6O2omlVNN7FktM8D1QeViNVNM5x1GTJP8XwA5UWee3sSl
+spec.cpu2006.rawconfig024: biA2GZqX1B7cMV7uKiLQaQ6aju317Q3leHkJ4dy7tuvoLe5neDCX8BhK3G2KKDjtoduG1XJ8kix4
+spec.cpu2006.rawconfig025: b/t8N+j5SLvfv748rFpauVn0lGteTWHshL5gk+xq6uIqg9y2WeAUkt7OiqyCZgwS2cPwPVszi9WB
+spec.cpu2006.rawconfig026: +8wSWncv9Sxfc7wwLtTJq3pMBDcvhCXq6y9wr7ofDmXGwvU6dZhaEX1piYh0q7rAC2wHSVm3/wU/
+spec.cpu2006.rawconfig027: 29f42fHa94An9C/QMgOdclWfAY0J9ttsDRGRpOqY4j1VvbTirY8dzdeFo+86mnxo5rFnHWpRxMTz
+spec.cpu2006.rawconfig028: 4ZaGJsKXT6AZWKqW6mmNHCPNVgLYRbLiVRFkJdBzmj23o2TWbJfiKT5dQylUR7+9nbevoL6XMzE8
+spec.cpu2006.rawconfig029: lnW17IcHJde4hx3ob3y+4zAbc5urZ24j6ZuMx5cflCTXDOfNTNfK8W5PChr5yPf10C4AaGD2OdZS
+spec.cpu2006.rawconfig030: Uf8fcoVpSl5Bqut6QbZrTPOlJba++nJ0M8XkqNFMVE5Vo+86Qz3r7md/3F9qhbqr0v2Kecnhra4b
+spec.cpu2006.rawconfig031: Kpx43WCcaTqtQnlpma40Fd1W/+CgCJYZkpcsVVdgkiSvV5pm7bn4/gIkYyIRK2KRJknqkkwKTJpi
+spec.cpu2006.rawconfig032: aEin2YZxJB8V/S2L6s8oFYIrCEpZXZ8qbZpzU4TCYOkVQNZ4Odc4uE+bhysTuotKnv1cFpqhjOAB
+spec.cpu2006.rawconfig033: Nd/keYKmIjv7B0J3IqQ=
+spec.cpu2006.runspecver: 6674
+spec.cpu2006.size: test
+spec.cpu2006.submit: 0
+spec.cpu2006.suitever: 1.2
+spec.cpu2006.sw_auto_parallel: --
+spec.cpu2006.table: 1
+spec.cpu2006.time: 1480820221
+spec.cpu2006.toolset: linux-suse10-amd64
+spec.cpu2006.toolvers000: @eNpdkMsOgyAQRX+IGK2Ij22Trt10bSgBSwpCeLS/X8CGors5N3Nn7sx1vt8EXu2MjaWm0nJCsEHg
+spec.cpu2006.toolvers001: QTfylNi8ktLBelcsdbsw/IWFKCnVVmkxoRZBEFBjQxP3TR14Y3xNiMb+h2cTCxm848JmW1bK1q5u
+spec.cpu2006.toolvers002: AVNG4j1G7BPcOsYFTUJQgFAEO5onC7WWdTkt2kPNnTKZlS3Kc7PyTnu3GPzZ0zQt0PFviWA3AuM3
+spec.cpu2006.toolvers003: qymJQSAIv/E6e+MtOUiEw13DBbzDpOPC9gtx/IjF
+spec.cpu2006.tunelist000: base
+spec.cpu2006.units: SPECfp
+spec.cpu2006.valid: X
+spec.cpu2006.results.410_bwaves.base.000.basepeak: 0
+spec.cpu2006.results.410_bwaves.base.000.benchmark: 410.bwaves
+spec.cpu2006.results.410_bwaves.base.000.copies: 1
+spec.cpu2006.results.410_bwaves.base.000.errors000: Some files did not appear to be built: bwaves
+spec.cpu2006.results.410_bwaves.base.000.ext: mpx_findbug
+spec.cpu2006.results.410_bwaves.base.000.iteration: -1
+spec.cpu2006.results.410_bwaves.base.000.mach: default
+spec.cpu2006.results.410_bwaves.base.000.rate: 0
+spec.cpu2006.results.410_bwaves.base.000.ratio: --
+spec.cpu2006.results.410_bwaves.base.000.reference: --
+spec.cpu2006.results.410_bwaves.base.000.reported_nsec: --
+spec.cpu2006.results.410_bwaves.base.000.reported_sec: --
+spec.cpu2006.results.410_bwaves.base.000.reported_time: --
+spec.cpu2006.results.410_bwaves.base.000.selected: 0
+spec.cpu2006.results.410_bwaves.base.000.submit: 0
+spec.cpu2006.results.410_bwaves.base.000.valid: CE
+spec.cpu2006.results.416_gamess.base.000.basepeak: 0
+spec.cpu2006.results.416_gamess.base.000.benchmark: 416.gamess
+spec.cpu2006.results.416_gamess.base.000.copies: 1
+spec.cpu2006.results.416_gamess.base.000.errors000: Some files did not appear to be built: gamess
+spec.cpu2006.results.416_gamess.base.000.ext: mpx_findbug
+spec.cpu2006.results.416_gamess.base.000.iteration: -1
+spec.cpu2006.results.416_gamess.base.000.mach: default
+spec.cpu2006.results.416_gamess.base.000.rate: 0
+spec.cpu2006.results.416_gamess.base.000.ratio: --
+spec.cpu2006.results.416_gamess.base.000.reference: --
+spec.cpu2006.results.416_gamess.base.000.reported_nsec: --
+spec.cpu2006.results.416_gamess.base.000.reported_sec: --
+spec.cpu2006.results.416_gamess.base.000.reported_time: --
+spec.cpu2006.results.416_gamess.base.000.selected: 0
+spec.cpu2006.results.416_gamess.base.000.submit: 0
+spec.cpu2006.results.416_gamess.base.000.valid: CE
+spec.cpu2006.results.433_milc.base.000.basepeak: 0
+spec.cpu2006.results.433_milc.base.000.benchmark: 433.milc
+spec.cpu2006.results.433_milc.base.000.clcopies: 1
+spec.cpu2006.results.433_milc.base.000.copytime000: 7.031814
+spec.cpu2006.results.433_milc.base.000.dp: 6
+spec.cpu2006.results.433_milc.base.000.ext: mpx_findbug
+spec.cpu2006.results.433_milc.base.000.iteration: 0
+spec.cpu2006.results.433_milc.base.000.mach: default
+spec.cpu2006.results.433_milc.base.000.rate: 0
+spec.cpu2006.results.433_milc.base.000.ratio: --
+spec.cpu2006.results.433_milc.base.000.rc: 0
+spec.cpu2006.results.433_milc.base.000.reference: --
+spec.cpu2006.results.433_milc.base.000.reported_nsec: 31865000
+spec.cpu2006.results.433_milc.base.000.reported_sec: 7
+spec.cpu2006.results.433_milc.base.000.reported_time: 7.031865
+spec.cpu2006.results.433_milc.base.000.selected: 1
+spec.cpu2006.results.433_milc.base.000.submit: 0
+spec.cpu2006.results.433_milc.base.000.valid: S
+spec.cpu2006.compopts000.433_milc.base: @eNrFUl1vgjAUfedXNH2vWbJl2YyYQEFlQ9oILtleCNaqnUBJQbf9+7U4ombZiw/zPvTj9vT29Jwb
+spec.cpu2006.compopts001.433_milc.base: yRIV2ZavRM6BrBohy7pv1Y0SrEnVrlwKle65EqsvG95AC5Mp7YM1Y0AHqpulvS53D48AFUX1CdCK
+spec.cpu2006.compopts002.433_milc.base: bTjbokqKsuEKLaQuUBtc1giGcrFoUWfbD5VVFVcalbeHxf0dQGs9Z4pt7FIj9xwgBpDs6PUkQF5M
+spec.cpu2006.compopts003.433_milc.base: fZxiOtfLyPPd+RigoKc3o8gMTpzoCZNoPHO8NJnS9MXHCZnFOuvFoRNP2mQYRM+x+Qi5BYc4Fk5D
+spec.cpu2006.compopts004.433_milc.base: qpl0MajlTjE+tHAfYGzD/1YAtg8T94nQxIZnckBLO6IJj0JnHOuz39K0CNeP8CTtQBdqBS1iaNAk
+spec.cpu2006.compopts005.433_milc.base: mAZvvq5DbtvilMwSxw3CIHk9ZdBqCC1z9QpN8+PrH5YO5OKds6YeGlxedOmjrkbx0LuG1ZdorMlO
+spec.cpu2006.compopts006.433_milc.base: nWSibXKNv3kBD/zJ3PTLSbN8A8YpNB0=
+spec.cpu2006.results.434_zeusmp.base.000.basepeak: 0
+spec.cpu2006.results.434_zeusmp.base.000.benchmark: 434.zeusmp
+spec.cpu2006.results.434_zeusmp.base.000.copies: 1
+spec.cpu2006.results.434_zeusmp.base.000.errors000: Some files did not appear to be built: zeusmp
+spec.cpu2006.results.434_zeusmp.base.000.ext: mpx_findbug
+spec.cpu2006.results.434_zeusmp.base.000.iteration: -1
+spec.cpu2006.results.434_zeusmp.base.000.mach: default
+spec.cpu2006.results.434_zeusmp.base.000.rate: 0
+spec.cpu2006.results.434_zeusmp.base.000.ratio: --
+spec.cpu2006.results.434_zeusmp.base.000.reference: --
+spec.cpu2006.results.434_zeusmp.base.000.reported_nsec: --
+spec.cpu2006.results.434_zeusmp.base.000.reported_sec: --
+spec.cpu2006.results.434_zeusmp.base.000.reported_time: --
+spec.cpu2006.results.434_zeusmp.base.000.selected: 0
+spec.cpu2006.results.434_zeusmp.base.000.submit: 0
+spec.cpu2006.results.434_zeusmp.base.000.valid: CE
+spec.cpu2006.results.435_gromacs.base.000.basepeak: 0
+spec.cpu2006.results.435_gromacs.base.000.benchmark: 435.gromacs
+spec.cpu2006.results.435_gromacs.base.000.copies: 1
+spec.cpu2006.results.435_gromacs.base.000.errors000: Some files did not appear to be built: gromacs
+spec.cpu2006.results.435_gromacs.base.000.ext: mpx_findbug
+spec.cpu2006.results.435_gromacs.base.000.iteration: -1
+spec.cpu2006.results.435_gromacs.base.000.mach: default
+spec.cpu2006.results.435_gromacs.base.000.rate: 0
+spec.cpu2006.results.435_gromacs.base.000.ratio: --
+spec.cpu2006.results.435_gromacs.base.000.reference: --
+spec.cpu2006.results.435_gromacs.base.000.reported_nsec: --
+spec.cpu2006.results.435_gromacs.base.000.reported_sec: --
+spec.cpu2006.results.435_gromacs.base.000.reported_time: --
+spec.cpu2006.results.435_gromacs.base.000.selected: 0
+spec.cpu2006.results.435_gromacs.base.000.submit: 0
+spec.cpu2006.results.435_gromacs.base.000.valid: CE
+spec.cpu2006.results.436_cactusADM.base.000.basepeak: 0
+spec.cpu2006.results.436_cactusADM.base.000.benchmark: 436.cactusADM
+spec.cpu2006.results.436_cactusADM.base.000.copies: 1
+spec.cpu2006.results.436_cactusADM.base.000.errors000: Some files did not appear to be built: cactusADM
+spec.cpu2006.results.436_cactusADM.base.000.ext: mpx_findbug
+spec.cpu2006.results.436_cactusADM.base.000.iteration: -1
+spec.cpu2006.results.436_cactusADM.base.000.mach: default
+spec.cpu2006.results.436_cactusADM.base.000.rate: 0
+spec.cpu2006.results.436_cactusADM.base.000.ratio: --
+spec.cpu2006.results.436_cactusADM.base.000.reference: --
+spec.cpu2006.results.436_cactusADM.base.000.reported_nsec: --
+spec.cpu2006.results.436_cactusADM.base.000.reported_sec: --
+spec.cpu2006.results.436_cactusADM.base.000.reported_time: --
+spec.cpu2006.results.436_cactusADM.base.000.selected: 0
+spec.cpu2006.results.436_cactusADM.base.000.submit: 0
+spec.cpu2006.results.436_cactusADM.base.000.valid: CE
+spec.cpu2006.results.437_leslie3d.base.000.basepeak: 0
+spec.cpu2006.results.437_leslie3d.base.000.benchmark: 437.leslie3d
+spec.cpu2006.results.437_leslie3d.base.000.copies: 1
+spec.cpu2006.results.437_leslie3d.base.000.errors000: Some files did not appear to be built: leslie3d
+spec.cpu2006.results.437_leslie3d.base.000.ext: mpx_findbug
+spec.cpu2006.results.437_leslie3d.base.000.iteration: -1
+spec.cpu2006.results.437_leslie3d.base.000.mach: default
+spec.cpu2006.results.437_leslie3d.base.000.rate: 0
+spec.cpu2006.results.437_leslie3d.base.000.ratio: --
+spec.cpu2006.results.437_leslie3d.base.000.reference: --
+spec.cpu2006.results.437_leslie3d.base.000.reported_nsec: --
+spec.cpu2006.results.437_leslie3d.base.000.reported_sec: --
+spec.cpu2006.results.437_leslie3d.base.000.reported_time: --
+spec.cpu2006.results.437_leslie3d.base.000.selected: 0
+spec.cpu2006.results.437_leslie3d.base.000.submit: 0
+spec.cpu2006.results.437_leslie3d.base.000.valid: CE
+spec.cpu2006.results.444_namd.base.000.basepeak: 0
+spec.cpu2006.results.444_namd.base.000.benchmark: 444.namd
+spec.cpu2006.results.444_namd.base.000.copies: 1
+spec.cpu2006.results.444_namd.base.000.errors000: Error with make!
+spec.cpu2006.results.444_namd.base.000.ext: mpx_findbug
+spec.cpu2006.results.444_namd.base.000.iteration: -1
+spec.cpu2006.results.444_namd.base.000.mach: default
+spec.cpu2006.results.444_namd.base.000.rate: 0
+spec.cpu2006.results.444_namd.base.000.ratio: --
+spec.cpu2006.results.444_namd.base.000.reference: --
+spec.cpu2006.results.444_namd.base.000.reported_nsec: --
+spec.cpu2006.results.444_namd.base.000.reported_sec: --
+spec.cpu2006.results.444_namd.base.000.reported_time: --
+spec.cpu2006.results.444_namd.base.000.selected: 0
+spec.cpu2006.results.444_namd.base.000.submit: 0
+spec.cpu2006.results.444_namd.base.000.valid: CE
+spec.cpu2006.results.447_dealII.base.000.basepeak: 0
+spec.cpu2006.results.447_dealII.base.000.benchmark: 447.dealII
+spec.cpu2006.results.447_dealII.base.000.copies: 1
+spec.cpu2006.results.447_dealII.base.000.errors000: Error with make!
+spec.cpu2006.results.447_dealII.base.000.ext: mpx_findbug
+spec.cpu2006.results.447_dealII.base.000.iteration: -1
+spec.cpu2006.results.447_dealII.base.000.mach: default
+spec.cpu2006.results.447_dealII.base.000.rate: 0
+spec.cpu2006.results.447_dealII.base.000.ratio: --
+spec.cpu2006.results.447_dealII.base.000.reference: --
+spec.cpu2006.results.447_dealII.base.000.reported_nsec: --
+spec.cpu2006.results.447_dealII.base.000.reported_sec: --
+spec.cpu2006.results.447_dealII.base.000.reported_time: --
+spec.cpu2006.results.447_dealII.base.000.selected: 0
+spec.cpu2006.results.447_dealII.base.000.submit: 0
+spec.cpu2006.results.447_dealII.base.000.valid: CE
+spec.cpu2006.results.450_soplex.base.000.basepeak: 0
+spec.cpu2006.results.450_soplex.base.000.benchmark: 450.soplex
+spec.cpu2006.results.450_soplex.base.000.copies: 1
+spec.cpu2006.results.450_soplex.base.000.errors000: Error with make!
+spec.cpu2006.results.450_soplex.base.000.ext: mpx_findbug
+spec.cpu2006.results.450_soplex.base.000.iteration: -1
+spec.cpu2006.results.450_soplex.base.000.mach: default
+spec.cpu2006.results.450_soplex.base.000.rate: 0
+spec.cpu2006.results.450_soplex.base.000.ratio: --
+spec.cpu2006.results.450_soplex.base.000.reference: --
+spec.cpu2006.results.450_soplex.base.000.reported_nsec: --
+spec.cpu2006.results.450_soplex.base.000.reported_sec: --
+spec.cpu2006.results.450_soplex.base.000.reported_time: --
+spec.cpu2006.results.450_soplex.base.000.selected: 0
+spec.cpu2006.results.450_soplex.base.000.submit: 0
+spec.cpu2006.results.450_soplex.base.000.valid: CE
+spec.cpu2006.results.453_povray.base.000.basepeak: 0
+spec.cpu2006.results.453_povray.base.000.benchmark: 453.povray
+spec.cpu2006.results.453_povray.base.000.copies: 1
+spec.cpu2006.results.453_povray.base.000.errors000: Error with make!
+spec.cpu2006.results.453_povray.base.000.ext: mpx_findbug
+spec.cpu2006.results.453_povray.base.000.iteration: -1
+spec.cpu2006.results.453_povray.base.000.mach: default
+spec.cpu2006.results.453_povray.base.000.rate: 0
+spec.cpu2006.results.453_povray.base.000.ratio: --
+spec.cpu2006.results.453_povray.base.000.reference: --
+spec.cpu2006.results.453_povray.base.000.reported_nsec: --
+spec.cpu2006.results.453_povray.base.000.reported_sec: --
+spec.cpu2006.results.453_povray.base.000.reported_time: --
+spec.cpu2006.results.453_povray.base.000.selected: 0
+spec.cpu2006.results.453_povray.base.000.submit: 0
+spec.cpu2006.results.453_povray.base.000.valid: CE
+spec.cpu2006.results.454_calculix.base.000.basepeak: 0
+spec.cpu2006.results.454_calculix.base.000.benchmark: 454.calculix
+spec.cpu2006.results.454_calculix.base.000.copies: 1
+spec.cpu2006.results.454_calculix.base.000.errors000: Some files did not appear to be built: calculix
+spec.cpu2006.results.454_calculix.base.000.ext: mpx_findbug
+spec.cpu2006.results.454_calculix.base.000.iteration: -1
+spec.cpu2006.results.454_calculix.base.000.mach: default
+spec.cpu2006.results.454_calculix.base.000.rate: 0
+spec.cpu2006.results.454_calculix.base.000.ratio: --
+spec.cpu2006.results.454_calculix.base.000.reference: --
+spec.cpu2006.results.454_calculix.base.000.reported_nsec: --
+spec.cpu2006.results.454_calculix.base.000.reported_sec: --
+spec.cpu2006.results.454_calculix.base.000.reported_time: --
+spec.cpu2006.results.454_calculix.base.000.selected: 0
+spec.cpu2006.results.454_calculix.base.000.submit: 0
+spec.cpu2006.results.454_calculix.base.000.valid: CE
+spec.cpu2006.results.459_GemsFDTD.base.000.basepeak: 0
+spec.cpu2006.results.459_GemsFDTD.base.000.benchmark: 459.GemsFDTD
+spec.cpu2006.results.459_GemsFDTD.base.000.copies: 1
+spec.cpu2006.results.459_GemsFDTD.base.000.errors000: Some files did not appear to be built: GemsFDTD
+spec.cpu2006.results.459_GemsFDTD.base.000.ext: mpx_findbug
+spec.cpu2006.results.459_GemsFDTD.base.000.iteration: -1
+spec.cpu2006.results.459_GemsFDTD.base.000.mach: default
+spec.cpu2006.results.459_GemsFDTD.base.000.rate: 0
+spec.cpu2006.results.459_GemsFDTD.base.000.ratio: --
+spec.cpu2006.results.459_GemsFDTD.base.000.reference: --
+spec.cpu2006.results.459_GemsFDTD.base.000.reported_nsec: --
+spec.cpu2006.results.459_GemsFDTD.base.000.reported_sec: --
+spec.cpu2006.results.459_GemsFDTD.base.000.reported_time: --
+spec.cpu2006.results.459_GemsFDTD.base.000.selected: 0
+spec.cpu2006.results.459_GemsFDTD.base.000.submit: 0
+spec.cpu2006.results.459_GemsFDTD.base.000.valid: CE
+spec.cpu2006.results.465_tonto.base.000.basepeak: 0
+spec.cpu2006.results.465_tonto.base.000.benchmark: 465.tonto
+spec.cpu2006.results.465_tonto.base.000.copies: 1
+spec.cpu2006.results.465_tonto.base.000.errors000: Some files did not appear to be built: tonto
+spec.cpu2006.results.465_tonto.base.000.ext: mpx_findbug
+spec.cpu2006.results.465_tonto.base.000.iteration: -1
+spec.cpu2006.results.465_tonto.base.000.mach: default
+spec.cpu2006.results.465_tonto.base.000.rate: 0
+spec.cpu2006.results.465_tonto.base.000.ratio: --
+spec.cpu2006.results.465_tonto.base.000.reference: --
+spec.cpu2006.results.465_tonto.base.000.reported_nsec: --
+spec.cpu2006.results.465_tonto.base.000.reported_sec: --
+spec.cpu2006.results.465_tonto.base.000.reported_time: --
+spec.cpu2006.results.465_tonto.base.000.selected: 0
+spec.cpu2006.results.465_tonto.base.000.submit: 0
+spec.cpu2006.results.465_tonto.base.000.valid: CE
+spec.cpu2006.results.470_lbm.base.000.basepeak: 0
+spec.cpu2006.results.470_lbm.base.000.benchmark: 470.lbm
+spec.cpu2006.results.470_lbm.base.000.clcopies: 1
+spec.cpu2006.results.470_lbm.base.000.copytime000: 1.634125
+spec.cpu2006.results.470_lbm.base.000.dp: 6
+spec.cpu2006.results.470_lbm.base.000.ext: mpx_findbug
+spec.cpu2006.results.470_lbm.base.000.iteration: 0
+spec.cpu2006.results.470_lbm.base.000.mach: default
+spec.cpu2006.results.470_lbm.base.000.rate: 0
+spec.cpu2006.results.470_lbm.base.000.ratio: --
+spec.cpu2006.results.470_lbm.base.000.rc: 0
+spec.cpu2006.results.470_lbm.base.000.reference: --
+spec.cpu2006.results.470_lbm.base.000.reported_nsec: 634154000
+spec.cpu2006.results.470_lbm.base.000.reported_sec: 1
+spec.cpu2006.results.470_lbm.base.000.reported_time: 1.634154
+spec.cpu2006.results.470_lbm.base.000.selected: 1
+spec.cpu2006.results.470_lbm.base.000.submit: 0
+spec.cpu2006.results.470_lbm.base.000.valid: S
+spec.cpu2006.compopts000.470_lbm.base: @eNrFUU1PwjAYvu9XNL3XmGCMEkbCPsTqoA1sB70sW+lGZVuXtqD+e7shAWK8eJD30q/nfft8zGWD
+spec.cpu2006.compopts001.470_lbm.base: 6mzDC1FxIFsjZKOHjjZKMJOqbbMSKt1xJYpPF15DxyczOgQlY8AW0mblls327h6gum4/ACrYmrMN
+spec.cpu2006.compopts002.470_lbm.base: aqVoDFcol3aA7nCZEQxVIu9RZ8d3lbUtVxZV9Y/17Q1ApV0zxdZuY5E7DhADSB7oXUmAgiUN/dSn
+spec.cpu2006.compopts003.470_lbm.base: id3Og9BLpj0hMgD7OgLSiNqJhxppuVWMjx1/CHzfhf+tBPYfE++J0NiFZ7KgY521hB+iyXRp335K
+spec.cpu2006.compopts004.470_lbm.base: hA7pmmmMZ/g1tBAy6JsoWcQTD0c4fjnt65VDJ8Lz5wtE9p3GL0GMZP7GmdHjDlfVh+ujG51PUXCJ
+spec.cpu2006.compopts005.470_lbm.base: gP7isSU7m8SPaYS9Lrqqhnv+JOlSPon4C9F7EOQ=
+spec.cpu2006.results.481_wrf.base.000.basepeak: 0
+spec.cpu2006.results.481_wrf.base.000.benchmark: 481.wrf
+spec.cpu2006.results.481_wrf.base.000.copies: 1
+spec.cpu2006.results.481_wrf.base.000.errors000: Some files did not appear to be built: wrf
+spec.cpu2006.results.481_wrf.base.000.ext: mpx_findbug
+spec.cpu2006.results.481_wrf.base.000.iteration: -1
+spec.cpu2006.results.481_wrf.base.000.mach: default
+spec.cpu2006.results.481_wrf.base.000.rate: 0
+spec.cpu2006.results.481_wrf.base.000.ratio: --
+spec.cpu2006.results.481_wrf.base.000.reference: --
+spec.cpu2006.results.481_wrf.base.000.reported_nsec: --
+spec.cpu2006.results.481_wrf.base.000.reported_sec: --
+spec.cpu2006.results.481_wrf.base.000.reported_time: --
+spec.cpu2006.results.481_wrf.base.000.selected: 0
+spec.cpu2006.results.481_wrf.base.000.submit: 0
+spec.cpu2006.results.481_wrf.base.000.valid: CE
+spec.cpu2006.results.482_sphinx3.base.000.basepeak: 0
+spec.cpu2006.results.482_sphinx3.base.000.benchmark: 482.sphinx3
+spec.cpu2006.results.482_sphinx3.base.000.clcopies: 1
+spec.cpu2006.results.482_sphinx3.base.000.copytime000: 1.408074
+spec.cpu2006.results.482_sphinx3.base.000.dp: 6
+spec.cpu2006.results.482_sphinx3.base.000.ext: mpx_findbug
+spec.cpu2006.results.482_sphinx3.base.000.iteration: 0
+spec.cpu2006.results.482_sphinx3.base.000.mach: default
+spec.cpu2006.results.482_sphinx3.base.000.rate: 0
+spec.cpu2006.results.482_sphinx3.base.000.ratio: --
+spec.cpu2006.results.482_sphinx3.base.000.rc: 0
+spec.cpu2006.results.482_sphinx3.base.000.reference: --
+spec.cpu2006.results.482_sphinx3.base.000.reported_nsec: 408119000
+spec.cpu2006.results.482_sphinx3.base.000.reported_sec: 1
+spec.cpu2006.results.482_sphinx3.base.000.reported_time: 1.408119
+spec.cpu2006.results.482_sphinx3.base.000.selected: 1
+spec.cpu2006.results.482_sphinx3.base.000.submit: 0
+spec.cpu2006.results.482_sphinx3.base.000.valid: S
+spec.cpu2006.compopts000.482_sphinx3.base: @eNrFUkFvgjAYvfMrmt5rlrgsmxETqCjdkJKJS7YLwVq1EygpxW3/fgVH1Cw7bIf5XUr7vfY93vtC
+spec.cpu2006.compopts001.482_sphinx3.base: WaA83fG1yDiQpRayqAZWpZVgOlF1sRIq2XMl1h82vIIWprNoADaMAVOo0it7U9S3dwDlefkO0Jpt
+spec.cpu2006.compopts002.482_sphinx3.base: OduhUopCc4WW0jxQNbhUC4YysWxRZ9s3lZYlVwaVtc385hqgjVlTxbZ2YZB7DhADSHbyehKg8Tzy
+spec.cpu2006.compopts003.482_sphinx3.base: cIKjhfkMx567mAJEeufnvvPkJZiGEzJN/EObGM5ai6xVT/vgUMdbSRAZ+q6GlawV4yMLDwDGNvzv
+spec.cpu2006.compopts004.482_sphinx3.base: 34YtMXXvaRTb8MwDaJkYjOBJ4EznpvfdjxbheiH2kw70G4OgRRvuKCYz8uKZy7TfvhjRx9hxSUDi
+spec.cpu2006.compopts005.482_sphinx3.base: 51Pa1jhoBSR8uMB4fIX5Q45DuXzlTFejBpfl3fHRzMbmYHyJfP/isRE7c2I/CYjbhJrl8KCfLpoh
+spec.cpu2006.compopts006.482_sphinx3.base: OZmQT4aWLlM=

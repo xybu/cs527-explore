@@ -1,0 +1,2505 @@
+runspec v6674 started at Sat Dec  3 22:00:52 2016 on "giga"
+runspec is: /home/xb/spec/bin/runspec
+runspec: runspec -c mpx_findbug -a run -I -l --size test -n 1 all_c
+toolset: linux-suse10-amd64
+
+Locating benchmarks...found 31 benchmarks in 6 benchsets.
+Reading config file '/home/xb/spec/config/mpx_findbug.cfg'
+Running "specperl /home/xb/spec/Docs/sysinfo" to gather system information.
+Read 62 total lines from the sysinfo program.
+Read 61 usable lines from the sysinfo program.
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = mpx_findbug
+Size      = test
+Machine   = default
+benchmarks= 400.perlbench,401.bzip2,403.gcc,429.mcf,433.milc,445.gobmk,456.hmmer,458.sjeng,462.libquantum,464.h264ref,470.lbm,482.sphinx3,998.specrand,999.specrand
+outputs   = asc, Screen
+username  = xb
+Benchmarks selected: 400.perlbench, 401.bzip2, 403.gcc, 429.mcf, 433.milc, 445.gobmk, 456.hmmer, 458.sjeng, 462.libquantum, 464.h264ref, 470.lbm, 482.sphinx3, 998.specrand, 999.specrand
+Compiling Binaries
+
+------------------------------------------------------------------------
+When checking options for /home/xb/spec/benchspec/CPU2006/400.perlbench/exe/perlbench_base.mpx_findbug, no MD5 sums were
+  found in the config file.  They will be installed after build.
+  Building 400.perlbench base mpx_findbug default: (build_base_mpx_findbug.0000)
+Wrote to makefile '/home/xb/spec/benchspec/CPU2006/400.perlbench/build/build_base_mpx_findbug.0000/Makefile.deps':
+
+# These are the build dependencies
+
+$(addsuffix $(OBJ), $(basename perl.c)): perl.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename universal.c)): universal.c perliol.h XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename perlhost.h)): perlhost.h iperlsys.h vmem.h vdir.h perlio.h
+$(addsuffix $(OBJ), $(basename doio.c)): doio.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename win32thread.c)): win32thread.c win32.h win32iop.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename locale.c)): locale.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename op.c)): op.c keywords.h XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename gv.c)): gv.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename av.c)): av.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename perly.c)): perly.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename mg.c)): mg.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename xsutils.c)): xsutils.c XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename proto.h)): proto.h pp_proto.h
+$(addsuffix $(OBJ), $(basename Base64.c)): Base64.c XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename perllib.c)): perllib.c XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename IO.c)): IO.c poll.h XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename iperlsys.h)): iperlsys.h perlio.h
+$(addsuffix $(OBJ), $(basename doop.c)): doop.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename toke.c)): toke.c keywords.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename Storable.c)): Storable.c XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename Dumper.c)): Dumper.c XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename perlapi.c)): perlapi.c perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename perlmain.c)): perlmain.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename hparser.c)): hparser.c hctype.h tokenpos.h
+$(addsuffix $(OBJ), $(basename HiRes.c)): HiRes.c const-c.inc XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename sv.c)): sv.c regcomp.h regnodes.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename perlio.c)): perlio.c perlsdio.h perliol.h XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename taint.c)): taint.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename pad.c)): pad.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename DynaLoader.c)): DynaLoader.c XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename util.c)): util.c specrand.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename regcomp.c)): regcomp.c INTERN.h regcomp.h regnodes.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename utf8.c)): utf8.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename miniperlmain.c)): miniperlmain.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename scope.c)): scope.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename XSUB.h)): XSUB.h perlapi.h
+$(addsuffix $(OBJ), $(basename attrs.c)): attrs.c XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename config.h)): config.h spec_config.h
+$(addsuffix $(OBJ), $(basename win32io.c)): win32io.c perliol.h XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename numeric.c)): numeric.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename MD5.c)): MD5.c XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename Cwd.c)): Cwd.c XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename pp_pack.c)): pp_pack.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename poll.c)): poll.c poll.h XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename pp_hot.c)): pp_hot.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename pp_sys.c)): pp_sys.c reentr.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename globals.c)): globals.c INTERN.h perlapi.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename run.c)): run.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename regexec.c)): regexec.c regcomp.h regnodes.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename Hostname.c)): Hostname.c XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename Peek.c)): Peek.c XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename win32sck.c)): win32sck.c win32iop.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename pp_ctl.c)): pp_ctl.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename hv.c)): hv.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename Parser.c)): Parser.c hparser.h parser-util.c hparser.c hctype.h tokenpos.h XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename pp_sort.c)): pp_sort.c specrand.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename deb.c)): deb.c EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename pp.c)): pp.c reentr.h keywords.h specrand.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename win32.c)): win32.c win32iop.h XSUB.h perlapi.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+$(addsuffix $(OBJ), $(basename dump.c)): dump.c regcomp.h regnodes.h EXTERN.h perl.h config.h spec_config.h embed.h handy.h iperlsys.h perlio.h regexp.h sv.h util.h form.h gv.h pad.h cv.h opnames.h op.h cop.h av.h hv.h mg.h scope.h warnings.h utf8.h perly.h thread.h pp.h proto.h pp_proto.h opcode.h embedvar.h intrpvar.h thrdvar.h perlvars.h patchlevel.h
+# End dependencies
+Wrote to makefile '/home/xb/spec/benchspec/CPU2006/400.perlbench/build/build_base_mpx_findbug.0000/Makefile.spec':
+TUNE=base
+EXT=mpx_findbug
+NUMBER=400
+NAME=perlbench
+SOURCES= av.c deb.c doio.c doop.c dump.c globals.c gv.c hv.c locale.c mg.c \
+	 numeric.c op.c pad.c perl.c perlapi.c perlio.c perlmain.c perly.c pp.c \
+	 pp_ctl.c pp_hot.c pp_pack.c pp_sort.c pp_sys.c regcomp.c regexec.c run.c \
+	 scope.c sv.c taint.c toke.c universal.c utf8.c util.c xsutils.c Base64.c \
+	 Cwd.c Dumper.c HiRes.c IO.c Peek.c attrs.c poll.c stdio.c DynaLoader.c \
+	 MD5.c Storable.c Parser.c specrand.c Hostname.c Opcode.c
+EXEBASE=perlbench
+NEED_MATH=yes
+BENCHLANG=C
+ONESTEP=
+CONESTEP=
+
+BENCH_FLAGS      = -DPERL_CORE
+CC               = gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native
+COPTIMIZE        = -O3
+CPORTABILITY     = -DSPEC_CPU_LINUX_X64
+CXX              = g++             -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native
+CXXOPTIMIZE      = -O3
+EXTRA_LIBS       = 
+FC               = echo     -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native
+FPBASE           = yes
+OS               = unix
+PORTABILITY      = -DSPEC_CPU_LP64
+absolutely_no_locking = 0
+abstol           = 
+action           = validate
+allow_extension_override = 0
+backup_config    = 1
+baseexe          = perlbench
+basepeak         = 0
+benchdir         = benchspec
+benchmark        = 400.perlbench
+binary           = 
+bindir           = exe
+build_in_build_dir = 1
+builddir         = build
+bundleaction     = 
+bundlename       = 
+calctol          = 0
+changedmd5       = 0
+check_integrity  = 1
+check_md5        = 1
+check_version    = 1
+clean_between_builds = no
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = perlbench_base.mpx_findbug
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+commandstdoutfile = speccmds.stdout
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+comparestdoutfile = compare.stdout
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = /home/xb/spec/config/mpx_findbug.cfg
+copies           = 1
+datadir          = data
+default_size     = ref
+delay            = 0
+deletebinaries   = 0
+deletework       = 0
+dependent_workloads = 0
+difflines        = 10
+dirprot          = 511
+endian           = 12345678
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+expid            = 
+ext              = mpx_findbug
+fake             = 0
+feedback         = 1
+flag_url_base    = http://www.spec.org/auto/cpu2006/flags/
+floatcompare     = 
+help             = 0
+http_proxy       = 
+http_timeout     = 30
+hw_cpu_name      = Intel Core i7-6700K
+hw_disk          = 357 GB  add more disk info here
+hw_memory001     = 60.614 GB fixme: If using DDR3, format is:
+hw_memory002     = 'N GB (M x N GB nRxn PCn-nnnnnR-n, ECC)'
+hw_nchips        = 1
+ignore_errors    = 1
+ignore_sigint    = 0
+ignorecase       = 
+info_wrap_columns = 50
+inputdir         = input
+iteration        = -1
+iterations       = 1
+keeptmp          = 0
+line_width       = 0
+locking          = 1
+log              = CPU2006
+log_line_width   = 0
+log_timestamp    = 0
+logname          = /home/xb/spec/result/CPU2006.010.log
+lognum           = 010
+mach             = default
+mail_reports     = all
+mailcompress     = 0
+mailmethod       = smtp
+mailport         = 25
+mailserver       = 127.0.0.1
+mailto           = 
+make             = specmake
+make_no_clobber  = 0
+makeflags        = -j20
+max_active_compares = 0
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+monitor_specrun_wrapper = $command
+monitor_wrapper  = $command
+name             = perlbench
+need_math        = yes
+no_input_handler = close
+no_monitor       = 
+note_preenv      = 0
+notes_plat_sysinfo_000 =  Sysinfo program /home/xb/spec/Docs/sysinfo
+notes_plat_sysinfo_005 =  $Rev: 6775 $ $Date:: 2011-08-16 \#$ 8787f7622badcf24e01c368b1db4377c
+notes_plat_sysinfo_010 =  running on giga Sat Dec  3 22:00:53 2016
+notes_plat_sysinfo_015 = 
+notes_plat_sysinfo_020 =  This section contains SUT (System Under Test) info as seen by
+notes_plat_sysinfo_025 =  some common utilities.  To remove or add to this section, see:
+notes_plat_sysinfo_030 =    http://www.spec.org/cpu2006/Docs/config.html\#sysinfo
+notes_plat_sysinfo_035 = 
+notes_plat_sysinfo_040 =  From /proc/cpuinfo
+notes_plat_sysinfo_045 =     model name : Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz
+notes_plat_sysinfo_050 =        1 "physical id"s (chips)
+notes_plat_sysinfo_055 =        8 "processors"
+notes_plat_sysinfo_060 =     cores, siblings (Caution: counting these is hw and system dependent.  The
+notes_plat_sysinfo_065 =     following excerpts from /proc/cpuinfo might not be reliable.  Use with
+notes_plat_sysinfo_070 =     caution.)
+notes_plat_sysinfo_075 =        cpu cores : 4
+notes_plat_sysinfo_080 =        siblings  : 8
+notes_plat_sysinfo_085 =        physical 0: cores 0 1 2 3
+notes_plat_sysinfo_090 =     cache size : 8192 KB
+notes_plat_sysinfo_095 = 
+notes_plat_sysinfo_100 =  From /proc/meminfo
+notes_plat_sysinfo_105 =     MemTotal:       63558700 kB
+notes_plat_sysinfo_110 =     HugePages_Total:       0
+notes_plat_sysinfo_115 =     Hugepagesize:       2048 kB
+notes_plat_sysinfo_120 = 
+notes_plat_sysinfo_125 =  /usr/bin/lsb_release -d
+notes_plat_sysinfo_130 =     Ubuntu 16.10
+notes_plat_sysinfo_135 = 
+notes_plat_sysinfo_140 =  From /etc/*release* /etc/*version*
+notes_plat_sysinfo_145 =     debian_version: stretch/sid
+notes_plat_sysinfo_150 =     os-release:
+notes_plat_sysinfo_155 =        NAME="Ubuntu"
+notes_plat_sysinfo_160 =        VERSION="16.10 (Yakkety Yak)"
+notes_plat_sysinfo_165 =        ID=ubuntu
+notes_plat_sysinfo_170 =        ID_LIKE=debian
+notes_plat_sysinfo_175 =        PRETTY_NAME="Ubuntu 16.10"
+notes_plat_sysinfo_180 =        VERSION_ID="16.10"
+notes_plat_sysinfo_185 =        HOME_URL="http://www.ubuntu.com/"
+notes_plat_sysinfo_190 =        SUPPORT_URL="http://help.ubuntu.com/"
+notes_plat_sysinfo_195 = 
+notes_plat_sysinfo_200 =  uname -a:
+notes_plat_sysinfo_205 =     Linux giga 4.8.0-27-generic \#29-Ubuntu SMP Thu Oct 20 21:03:13 UTC 2016
+notes_plat_sysinfo_210 =     x86_64 x86_64 x86_64 GNU/Linux
+notes_plat_sysinfo_215 = 
+notes_plat_sysinfo_220 =  run-level 5 Dec 1 21:13
+notes_plat_sysinfo_225 = 
+notes_plat_sysinfo_230 =  SPEC is set to: /home/xb/spec
+notes_plat_sysinfo_235 =     Filesystem     Type  Size  Used Avail Use% Mounted on
+notes_plat_sysinfo_240 =     /dev/sda5      ext4  357G  339G  256K 100% /
+notes_plat_sysinfo_245 = 
+notes_plat_sysinfo_250 =  (End of data from sysinfo program)
+notes_wrap_columns = 0
+notes_wrap_indent =   
+num              = 400
+obiwan           = 
+os_exe_ext       = 
+output           = asc
+output_format    = asc, Screen
+output_root      = 
+outputdir        = output
+parallel_setup   = 1
+parallel_setup_prefork = 
+parallel_setup_type = fork
+parallel_test    = 0
+parallel_test_submit = 0
+parallel_test_workloads = 
+path             = /home/xb/spec/benchspec/CPU2006/400.perlbench
+plain_train      = 1
+power            = 0
+preenv           = 1
+prefix           = 
+prepared_by      = xb  (is never output, only tags rawfile)
+ranks            = 1
+rate             = 0
+realuser         = your name here
+rebuild          = 0
+reftime          = reftime
+reltol           = 
+reportable       = 0
+resultdir        = result
+review           = 0
+run              = all
+rundir           = run
+runspec          = /home/xb/spec/bin/runspec -c mpx_findbug -a run -I -l --size test -n 1 all_c
+safe_eval        = 1
+section_specifier_fatal = 1
+sendmail         = /usr/sbin/sendmail
+setpgrp_enabled  = 1
+setprocgroup     = 1
+setup_error      = 0
+shrate           = 0
+sigint           = 2
+size             = test
+size_class       = test
+skipabstol       = 
+skipobiwan       = 
+skipreltol       = 
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff
+specmake         = Makefile.YYYtArGeTYYYspec
+specrun          = specinvoke
+speed            = 0
+srcalt           = 
+srcdir           = src
+srcsource        = /home/xb/spec/benchspec/CPU2006/400.perlbench/src
+stagger          = 10
+strict_rundir_verify = 0
+sw_file          = ext4
+sw_os001         = Ubuntu 16.10
+sw_os002         = 4.8.0-27-generic
+sw_state         = Run level 5 (add definition here)
+sysinfo_program  = specperl /home/xb/spec/Docs/sysinfo
+table            = 1
+teeout           = yes
+teerunout        = yes
+test_date        = Dec-2016
+top              = /home/xb/spec
+train_with       = train
+tune             = base
+uid              = 1000
+unbuffer         = 1
+update-flags     = 0
+use_submit_for_speed = 0
+username         = xb
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+version_url      = http://www.spec.org/auto/cpu2006/current_version
+worklist         = list
+OUTPUT_RMFILES   = diffmail.2.550.15.24.23.100.out perfect.b.3.out scrabbl.out splitmail.535.13.25.24.1091.out suns.out validate
+  Compile for '400.perlbench' started at: Sat Dec  3 22:00:53 2016 (1480820453)
+Issuing make.clean command 'specmake -j20 clean'
+specmake -j20 clean 2> make.clean.err | tee make.clean.out
+Start make.clean command: Sat Dec  3 22:00:53 2016 (1480820453)
+rm -rf *.o  diffmail.2.550.15.24.23.100.out perfect.b.3.out scrabbl.out splitmail.535.13.25.24.1091.out suns.out validate
+find . \( -name \*.o -o -name '*.fppized.f*' -o -name '*.i' -o -name '*.mod' \) -print | xargs rm -rf
+rm -rf perlbench
+rm -rf perlbench.exe
+rm -rf core
+rm -rf 
+Stop make.clean command: Sat Dec  3 22:00:53 2016 (1480820453)
+Elapsed time for make.clean command: 00:00:00 (0)
+Issuing make command 'specmake -j20 build'
+specmake -j20 build 2> make.err | tee make.out
+Start make command: Sat Dec  3 22:00:53 2016 (1480820453)
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o av.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        av.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o deb.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        deb.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o doio.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        doio.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o doop.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        doop.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o dump.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        dump.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o globals.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        globals.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o gv.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        gv.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o hv.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        hv.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o locale.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        locale.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o mg.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        mg.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o numeric.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        numeric.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o op.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        op.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o pad.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        pad.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o perl.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        perl.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o perlapi.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        perlapi.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o perlio.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        perlio.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o perlmain.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        perlmain.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o perly.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        perly.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o pp.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        pp.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o pp_ctl.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        pp_ctl.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o pp_hot.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        pp_hot.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o pp_pack.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        pp_pack.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o pp_sort.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        pp_sort.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o pp_sys.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        pp_sys.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o regcomp.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        regcomp.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o regexec.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        regexec.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o run.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        run.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o scope.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        scope.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o sv.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        sv.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o taint.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        taint.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o toke.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        toke.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o universal.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        universal.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o utf8.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        utf8.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o util.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        util.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o xsutils.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        xsutils.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o Base64.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        Base64.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o Cwd.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        Cwd.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o Dumper.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        Dumper.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o HiRes.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        HiRes.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o IO.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        IO.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o Peek.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        Peek.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o attrs.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        attrs.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o poll.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        poll.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o stdio.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        stdio.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o DynaLoader.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        DynaLoader.c
+stdio.c: In function 'xsfprintf':
+stdio.c:26:3: warning: format not a string literal and no format arguments [-Wformat-security]
+   return fprintf( stream, text );
+   ^~~~~~
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o MD5.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        MD5.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o Storable.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        Storable.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o Parser.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        Parser.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o specrand.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        specrand.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o Hostname.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        Hostname.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o Opcode.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        Opcode.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native   -O3  -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64       av.o deb.o doio.o doop.o dump.o globals.o gv.o hv.o locale.o mg.o numeric.o op.o pad.o perl.o perlapi.o perlio.o perlmain.o perly.o pp.o pp_ctl.o pp_hot.o pp_pack.o pp_sort.o pp_sys.o regcomp.o regexec.o run.o scope.o sv.o taint.o toke.o universal.o utf8.o util.o xsutils.o Base64.o Cwd.o Dumper.o HiRes.o IO.o Peek.o attrs.o poll.o stdio.o DynaLoader.o MD5.o Storable.o Parser.o specrand.o Hostname.o Opcode.o             -lm        -o perlbench
+Stop make command: Sat Dec  3 22:01:05 2016 (1480820465)
+Elapsed time for make command: 00:00:12 (12)
+Issuing options command 'specmake -j20 options'
+specmake -j20 options 2> options.err | tee options.out
+Start options command: Sat Dec  3 22:01:05 2016 (1480820465)
+COMP: gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o options.o -DSPEC_CPU -DNDEBUG -DPERL_CORE   -O3       -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64        <source>
+C: CC="gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC_CPU -DNDEBUG"
+P: BENCH_FLAGS="-DPERL_CORE"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE="-O3"
+P: PORTABILITY="-DSPEC_CPU_LP64"
+P: CPORTABILITY="-DSPEC_CPU_LINUX_X64"
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_CPORTABILITY=""
+LINK: gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native   -O3  -DSPEC_CPU_LP64 -DSPEC_CPU_LINUX_X64       <objects>   -lm        -o options
+C: LD="gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native"
+O: COPTIMIZE="-O3"
+P: PORTABILITY="-DSPEC_CPU_LP64"
+P: CPORTABILITY="-DSPEC_CPU_LINUX_X64"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+Stop options command: Sat Dec  3 22:01:05 2016 (1480820465)
+Elapsed time for options command: 00:00:00 (0)
+  Compile for '400.perlbench' ended at: Sat Dec  3 22:01:05 2016 (1480820465)
+  Elapsed compile for '400.perlbench': 00:00:12 (12)
+
+------------------------------------------------------------------------
+When checking options for /home/xb/spec/benchspec/CPU2006/401.bzip2/exe/bzip2_base.mpx_findbug, no MD5 sums were
+  found in the config file.  They will be installed after build.
+  Building 401.bzip2 base mpx_findbug default: (build_base_mpx_findbug.0000)
+Wrote to makefile '/home/xb/spec/benchspec/CPU2006/401.bzip2/build/build_base_mpx_findbug.0000/Makefile.deps':
+
+# These are the build dependencies
+
+# End dependencies
+Wrote to makefile '/home/xb/spec/benchspec/CPU2006/401.bzip2/build/build_base_mpx_findbug.0000/Makefile.spec':
+TUNE=base
+EXT=mpx_findbug
+NUMBER=401
+NAME=bzip2
+SOURCES= spec.c blocksort.c bzip2.c bzlib.c compress.c crctable.c \
+	 decompress.c huffman.c randtable.c
+EXEBASE=bzip2
+NEED_MATH=
+BENCHLANG=C
+ONESTEP=
+CONESTEP=
+
+CC               = gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native
+COPTIMIZE        = -O3
+CXX              = g++             -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native
+CXXOPTIMIZE      = -O3
+EXTRA_LIBS       = 
+FC               = echo     -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native
+FPBASE           = yes
+OS               = unix
+PORTABILITY      = -DSPEC_CPU_LP64
+absolutely_no_locking = 0
+abstol           = 
+action           = validate
+allow_extension_override = 0
+backup_config    = 1
+baseexe          = bzip2
+basepeak         = 0
+benchdir         = benchspec
+benchmark        = 401.bzip2
+binary           = 
+bindir           = exe
+build_in_build_dir = 1
+builddir         = build
+bundleaction     = 
+bundlename       = 
+calctol          = 0
+changedmd5       = 0
+check_integrity  = 1
+check_md5        = 1
+check_version    = 1
+clean_between_builds = no
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = bzip2_base.mpx_findbug
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+commandstdoutfile = speccmds.stdout
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+comparestdoutfile = compare.stdout
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = /home/xb/spec/config/mpx_findbug.cfg
+copies           = 1
+datadir          = data
+default_size     = ref
+delay            = 0
+deletebinaries   = 0
+deletework       = 0
+dependent_workloads = 0
+difflines        = 10
+dirprot          = 511
+endian           = 12345678
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+expid            = 
+ext              = mpx_findbug
+fake             = 0
+feedback         = 1
+flag_url_base    = http://www.spec.org/auto/cpu2006/flags/
+floatcompare     = 
+help             = 0
+http_proxy       = 
+http_timeout     = 30
+hw_cpu_name      = Intel Core i7-6700K
+hw_disk          = 357 GB  add more disk info here
+hw_memory001     = 60.614 GB fixme: If using DDR3, format is:
+hw_memory002     = 'N GB (M x N GB nRxn PCn-nnnnnR-n, ECC)'
+hw_nchips        = 1
+ignore_errors    = 1
+ignore_sigint    = 0
+ignorecase       = 
+info_wrap_columns = 50
+inputdir         = input
+iteration        = -1
+iterations       = 1
+keeptmp          = 0
+line_width       = 0
+locking          = 1
+log              = CPU2006
+log_line_width   = 0
+log_timestamp    = 0
+logname          = /home/xb/spec/result/CPU2006.010.log
+lognum           = 010
+mach             = default
+mail_reports     = all
+mailcompress     = 0
+mailmethod       = smtp
+mailport         = 25
+mailserver       = 127.0.0.1
+mailto           = 
+make             = specmake
+make_no_clobber  = 0
+makeflags        = -j20
+max_active_compares = 0
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+monitor_specrun_wrapper = $command
+monitor_wrapper  = $command
+name             = bzip2
+need_math        = 
+no_input_handler = close
+no_monitor       = 
+note_preenv      = 0
+notes_plat_sysinfo_000 =  Sysinfo program /home/xb/spec/Docs/sysinfo
+notes_plat_sysinfo_005 =  $Rev: 6775 $ $Date:: 2011-08-16 \#$ 8787f7622badcf24e01c368b1db4377c
+notes_plat_sysinfo_010 =  running on giga Sat Dec  3 22:00:53 2016
+notes_plat_sysinfo_015 = 
+notes_plat_sysinfo_020 =  This section contains SUT (System Under Test) info as seen by
+notes_plat_sysinfo_025 =  some common utilities.  To remove or add to this section, see:
+notes_plat_sysinfo_030 =    http://www.spec.org/cpu2006/Docs/config.html\#sysinfo
+notes_plat_sysinfo_035 = 
+notes_plat_sysinfo_040 =  From /proc/cpuinfo
+notes_plat_sysinfo_045 =     model name : Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz
+notes_plat_sysinfo_050 =        1 "physical id"s (chips)
+notes_plat_sysinfo_055 =        8 "processors"
+notes_plat_sysinfo_060 =     cores, siblings (Caution: counting these is hw and system dependent.  The
+notes_plat_sysinfo_065 =     following excerpts from /proc/cpuinfo might not be reliable.  Use with
+notes_plat_sysinfo_070 =     caution.)
+notes_plat_sysinfo_075 =        cpu cores : 4
+notes_plat_sysinfo_080 =        siblings  : 8
+notes_plat_sysinfo_085 =        physical 0: cores 0 1 2 3
+notes_plat_sysinfo_090 =     cache size : 8192 KB
+notes_plat_sysinfo_095 = 
+notes_plat_sysinfo_100 =  From /proc/meminfo
+notes_plat_sysinfo_105 =     MemTotal:       63558700 kB
+notes_plat_sysinfo_110 =     HugePages_Total:       0
+notes_plat_sysinfo_115 =     Hugepagesize:       2048 kB
+notes_plat_sysinfo_120 = 
+notes_plat_sysinfo_125 =  /usr/bin/lsb_release -d
+notes_plat_sysinfo_130 =     Ubuntu 16.10
+notes_plat_sysinfo_135 = 
+notes_plat_sysinfo_140 =  From /etc/*release* /etc/*version*
+notes_plat_sysinfo_145 =     debian_version: stretch/sid
+notes_plat_sysinfo_150 =     os-release:
+notes_plat_sysinfo_155 =        NAME="Ubuntu"
+notes_plat_sysinfo_160 =        VERSION="16.10 (Yakkety Yak)"
+notes_plat_sysinfo_165 =        ID=ubuntu
+notes_plat_sysinfo_170 =        ID_LIKE=debian
+notes_plat_sysinfo_175 =        PRETTY_NAME="Ubuntu 16.10"
+notes_plat_sysinfo_180 =        VERSION_ID="16.10"
+notes_plat_sysinfo_185 =        HOME_URL="http://www.ubuntu.com/"
+notes_plat_sysinfo_190 =        SUPPORT_URL="http://help.ubuntu.com/"
+notes_plat_sysinfo_195 = 
+notes_plat_sysinfo_200 =  uname -a:
+notes_plat_sysinfo_205 =     Linux giga 4.8.0-27-generic \#29-Ubuntu SMP Thu Oct 20 21:03:13 UTC 2016
+notes_plat_sysinfo_210 =     x86_64 x86_64 x86_64 GNU/Linux
+notes_plat_sysinfo_215 = 
+notes_plat_sysinfo_220 =  run-level 5 Dec 1 21:13
+notes_plat_sysinfo_225 = 
+notes_plat_sysinfo_230 =  SPEC is set to: /home/xb/spec
+notes_plat_sysinfo_235 =     Filesystem     Type  Size  Used Avail Use% Mounted on
+notes_plat_sysinfo_240 =     /dev/sda5      ext4  357G  339G  256K 100% /
+notes_plat_sysinfo_245 = 
+notes_plat_sysinfo_250 =  (End of data from sysinfo program)
+notes_wrap_columns = 0
+notes_wrap_indent =   
+num              = 401
+obiwan           = 
+os_exe_ext       = 
+output           = asc
+output_format    = asc, Screen
+output_root      = 
+outputdir        = output
+parallel_setup   = 1
+parallel_setup_prefork = 
+parallel_setup_type = fork
+parallel_test    = 0
+parallel_test_submit = 0
+parallel_test_workloads = 
+path             = /home/xb/spec/benchspec/CPU2006/401.bzip2
+plain_train      = 1
+power            = 0
+preenv           = 1
+prefix           = 
+prepared_by      = xb  (is never output, only tags rawfile)
+ranks            = 1
+rate             = 0
+realuser         = your name here
+rebuild          = 0
+reftime          = reftime
+reltol           = 
+reportable       = 0
+resultdir        = result
+review           = 0
+run              = all
+rundir           = run
+runspec          = /home/xb/spec/bin/runspec -c mpx_findbug -a run -I -l --size test -n 1 all_c
+safe_eval        = 1
+section_specifier_fatal = 1
+sendmail         = /usr/sbin/sendmail
+setpgrp_enabled  = 1
+setprocgroup     = 1
+setup_error      = 0
+shrate           = 0
+sigint           = 2
+size             = test
+size_class       = test
+skipabstol       = 
+skipobiwan       = 
+skipreltol       = 
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff
+specmake         = Makefile.YYYtArGeTYYYspec
+specrun          = specinvoke
+speed            = 0
+srcalt           = 
+srcdir           = src
+srcsource        = /home/xb/spec/benchspec/CPU2006/401.bzip2/src
+stagger          = 10
+strict_rundir_verify = 0
+sw_file          = ext4
+sw_os001         = Ubuntu 16.10
+sw_os002         = 4.8.0-27-generic
+sw_state         = Run level 5 (add definition here)
+sysinfo_program  = specperl /home/xb/spec/Docs/sysinfo
+table            = 1
+teeout           = yes
+teerunout        = yes
+test_date        = Dec-2016
+top              = /home/xb/spec
+train_with       = train
+tune             = base
+uid              = 1000
+unbuffer         = 1
+update-flags     = 0
+use_submit_for_speed = 0
+username         = xb
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+version_url      = http://www.spec.org/auto/cpu2006/current_version
+worklist         = list
+OUTPUT_RMFILES   = byoudoin.jpg.out input.combined.out input.program.out
+  Compile for '401.bzip2' started at: Sat Dec  3 22:01:05 2016 (1480820465)
+Issuing make.clean command 'specmake -j20 clean'
+specmake -j20 clean 2> make.clean.err | tee make.clean.out
+Start make.clean command: Sat Dec  3 22:01:05 2016 (1480820465)
+rm -rf *.o  byoudoin.jpg.out input.combined.out input.program.out
+find . \( -name \*.o -o -name '*.fppized.f*' -o -name '*.i' -o -name '*.mod' \) -print | xargs rm -rf
+rm -rf bzip2
+rm -rf bzip2.exe
+rm -rf core
+rm -rf 
+Stop make.clean command: Sat Dec  3 22:01:05 2016 (1480820465)
+Elapsed time for make.clean command: 00:00:00 (0)
+Issuing make command 'specmake -j20 build'
+specmake -j20 build 2> make.err | tee make.out
+Start make command: Sat Dec  3 22:01:05 2016 (1480820465)
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o spec.o -DSPEC_CPU -DNDEBUG    -O3       -DSPEC_CPU_LP64         spec.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o blocksort.o -DSPEC_CPU -DNDEBUG    -O3       -DSPEC_CPU_LP64         blocksort.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o bzip2.o -DSPEC_CPU -DNDEBUG    -O3       -DSPEC_CPU_LP64         bzip2.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o bzlib.o -DSPEC_CPU -DNDEBUG    -O3       -DSPEC_CPU_LP64         bzlib.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o compress.o -DSPEC_CPU -DNDEBUG    -O3       -DSPEC_CPU_LP64         compress.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o crctable.o -DSPEC_CPU -DNDEBUG    -O3       -DSPEC_CPU_LP64         crctable.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o decompress.o -DSPEC_CPU -DNDEBUG    -O3       -DSPEC_CPU_LP64         decompress.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o huffman.o -DSPEC_CPU -DNDEBUG    -O3       -DSPEC_CPU_LP64         huffman.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o randtable.o -DSPEC_CPU -DNDEBUG    -O3       -DSPEC_CPU_LP64         randtable.c
+In file included from bzlib_private.h:73:0,
+                 from bzlib.c:77:
+bzlib.c: In function 'BZ2_bzWriteOpen':
+bzlib.h:80:28: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+    #  define SPEC_NULLCAST (int)
+                            ^
+bzlib.c:996:13: note: in expansion of macro 'SPEC_NULLCAST'
+    if (f == SPEC_NULLCAST NULL ||
+             ^~~~~~~~~~~~~
+bzlib.c: In function 'BZ2_bzReadOpen':
+bzlib.h:80:28: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+    #  define SPEC_NULLCAST (int)
+                            ^
+bzlib.c:1172:13: note: in expansion of macro 'SPEC_NULLCAST'
+    if (f == SPEC_NULLCAST NULL ||
+             ^~~~~~~~~~~~~
+bzlib.c: In function 'bzopen_or_bzdopen':
+bzlib.h:80:28: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+    #  define SPEC_NULLCAST (int)
+                            ^
+bzlib.c:1512:12: note: in expansion of macro 'SPEC_NULLCAST'
+       fp = SPEC_NULLCAST NULL;
+            ^~~~~~~~~~~~~
+bzlib.h:80:28: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+    #  define SPEC_NULLCAST (int)
+                            ^
+bzlib.c:1521:14: note: in expansion of macro 'SPEC_NULLCAST'
+    if (fp == SPEC_NULLCAST NULL) return NULL;
+              ^~~~~~~~~~~~~
+In file included from bzip2.c:155:0:
+bzip2.c: In function 'compressStream':
+bzlib.h:80:28: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+    #  define SPEC_NULLCAST (int)
+                            ^
+bzip2.c:484:32: note: in expansion of macro 'SPEC_NULLCAST'
+       outputHandleJustInCase = SPEC_NULLCAST NULL;
+                                ^~~~~~~~~~~~~
+bzip2.c:487:27: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+    outputHandleJustInCase = NULL;
+                           ^
+In file included from bzip2.c:155:0:
+bzip2.c: In function 'uncompressStream':
+bzlib.h:80:28: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+    #  define SPEC_NULLCAST (int)
+                            ^
+bzip2.c:611:32: note: in expansion of macro 'SPEC_NULLCAST'
+       outputHandleJustInCase = SPEC_NULLCAST NULL;
+                                ^~~~~~~~~~~~~
+bzip2.c:614:27: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+    outputHandleJustInCase = NULL;
+                           ^
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native   -O3  -DSPEC_CPU_LP64        spec.o blocksort.o bzip2.o bzlib.o compress.o crctable.o decompress.o huffman.o randtable.o                     -o bzip2
+Stop make command: Sat Dec  3 22:01:07 2016 (1480820467)
+Elapsed time for make command: 00:00:02 (2)
+Issuing options command 'specmake -j20 options'
+specmake -j20 options 2> options.err | tee options.out
+Start options command: Sat Dec  3 22:01:07 2016 (1480820467)
+COMP: gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o options.o -DSPEC_CPU -DNDEBUG    -O3       -DSPEC_CPU_LP64         <source>
+C: CC="gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC_CPU -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE="-O3"
+P: PORTABILITY="-DSPEC_CPU_LP64"
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_CPORTABILITY=""
+LINK: gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native   -O3  -DSPEC_CPU_LP64        <objects>           -o options
+C: LD="gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native"
+O: COPTIMIZE="-O3"
+P: PORTABILITY="-DSPEC_CPU_LP64"
+C: LDOUT="-o options"
+Stop options command: Sat Dec  3 22:01:07 2016 (1480820467)
+Elapsed time for options command: 00:00:00 (0)
+  Compile for '401.bzip2' ended at: Sat Dec  3 22:01:07 2016 (1480820467)
+  Elapsed compile for '401.bzip2': 00:00:02 (2)
+
+------------------------------------------------------------------------
+When checking options for /home/xb/spec/benchspec/CPU2006/403.gcc/exe/gcc_base.mpx_findbug, no MD5 sums were
+  found in the config file.  They will be installed after build.
+  Building 403.gcc base mpx_findbug default: (build_base_mpx_findbug.0000)
+Wrote to makefile '/home/xb/spec/benchspec/CPU2006/403.gcc/build/build_base_mpx_findbug.0000/Makefile.deps':
+
+# These are the build dependencies
+
+# End dependencies
+Wrote to makefile '/home/xb/spec/benchspec/CPU2006/403.gcc/build/build_base_mpx_findbug.0000/Makefile.spec':
+TUNE=base
+EXT=mpx_findbug
+NUMBER=403
+NAME=gcc
+SOURCES= alloca.c asprintf.c vasprintf.c c-parse.c c-lang.c attribs.c \
+	 c-errors.c c-lex.c c-pragma.c c-decl.c c-typeck.c c-convert.c \
+	 c-aux-info.c c-common.c c-format.c c-semantics.c c-objc-common.c main.c \
+	 cpplib.c cpplex.c cppmacro.c cppexp.c cppfiles.c cpphash.c cpperror.c \
+	 cppinit.c cppdefault.c line-map.c mkdeps.c prefix.c version.c mbchar.c \
+	 alias.c bb-reorder.c bitmap.c builtins.c caller-save.c calls.c cfg.c \
+	 cfganal.c cfgbuild.c cfgcleanup.c cfglayout.c cfgloop.c cfgrtl.c \
+	 combine.c conflict.c convert.c cse.c cselib.c dbxout.c debug.c \
+	 dependence.c df.c diagnostic.c doloop.c dominance.c dwarf2asm.c \
+	 dwarf2out.c dwarfout.c emit-rtl.c except.c explow.c expmed.c expr.c \
+	 final.c flow.c fold-const.c function.c gcse.c genrtl.c ggc-common.c \
+	 global.c graph.c haifa-sched.c hash.c hashtable.c hooks.c ifcvt.c \
+	 insn-attrtab.c insn-emit.c insn-extract.c insn-opinit.c insn-output.c \
+	 insn-peep.c insn-recog.c integrate.c intl.c jump.c langhooks.c lcm.c \
+	 lists.c local-alloc.c loop.c obstack.c optabs.c params.c predict.c \
+	 print-rtl.c print-tree.c profile.c real.c recog.c reg-stack.c regclass.c \
+	 regmove.c regrename.c reload.c reload1.c reorg.c resource.c rtl.c \
+	 rtlanal.c rtl-error.c sbitmap.c sched-deps.c sched-ebb.c sched-rgn.c \
+	 sched-vis.c sdbout.c sibcall.c simplify-rtx.c ssa.c ssa-ccp.c ssa-dce.c \
+	 stmt.c stor-layout.c stringpool.c timevar.c toplev.c tree.c tree-dump.c \
+	 tree-inline.c unroll.c varasm.c varray.c vmsdbgout.c xcoffout.c \
+	 ggc-page.c i386.c xmalloc.c xexit.c hashtab.c safe-ctype.c splay-tree.c \
+	 xstrdup.c md5.c fibheap.c xstrerror.c concat.c partition.c hex.c \
+	 lbasename.c getpwd.c ucbqsort.c
+EXEBASE=gcc
+NEED_MATH=yes
+BENCHLANG=C
+ONESTEP=
+CONESTEP=
+
+BENCH_FLAGS      = -I.
+CC               = gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native
+COPTIMIZE        = -O3
+CXX              = g++             -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native
+CXXOPTIMIZE      = -O3
+EXTRA_LIBS       = 
+FC               = echo     -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native
+FPBASE           = yes
+OS               = unix
+PORTABILITY      = -DSPEC_CPU_LP64
+absolutely_no_locking = 0
+abstol           = 
+action           = validate
+allow_extension_override = 0
+backup_config    = 1
+baseexe          = gcc
+basepeak         = 0
+benchdir         = benchspec
+benchmark        = 403.gcc
+binary           = 
+bindir           = exe
+build_in_build_dir = 1
+builddir         = build
+bundleaction     = 
+bundlename       = 
+calctol          = 0
+changedmd5       = 0
+check_integrity  = 1
+check_md5        = 1
+check_version    = 1
+clean_between_builds = no
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = gcc_base.mpx_findbug
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+commandstdoutfile = speccmds.stdout
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+comparestdoutfile = compare.stdout
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = /home/xb/spec/config/mpx_findbug.cfg
+copies           = 1
+datadir          = data
+default_size     = ref
+delay            = 0
+deletebinaries   = 0
+deletework       = 0
+dependent_workloads = 0
+difflines        = 10
+dirprot          = 511
+endian           = 12345678
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+expid            = 
+ext              = mpx_findbug
+fake             = 0
+feedback         = 1
+flag_url_base    = http://www.spec.org/auto/cpu2006/flags/
+floatcompare     = 
+help             = 0
+http_proxy       = 
+http_timeout     = 30
+hw_cpu_name      = Intel Core i7-6700K
+hw_disk          = 357 GB  add more disk info here
+hw_memory001     = 60.614 GB fixme: If using DDR3, format is:
+hw_memory002     = 'N GB (M x N GB nRxn PCn-nnnnnR-n, ECC)'
+hw_nchips        = 1
+ignore_errors    = 1
+ignore_sigint    = 0
+ignorecase       = 
+info_wrap_columns = 50
+inputdir         = input
+iteration        = -1
+iterations       = 1
+keeptmp          = 0
+line_width       = 0
+locking          = 1
+log              = CPU2006
+log_line_width   = 0
+log_timestamp    = 0
+logname          = /home/xb/spec/result/CPU2006.010.log
+lognum           = 010
+mach             = default
+mail_reports     = all
+mailcompress     = 0
+mailmethod       = smtp
+mailport         = 25
+mailserver       = 127.0.0.1
+mailto           = 
+make             = specmake
+make_no_clobber  = 0
+makeflags        = -j20
+max_active_compares = 0
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+monitor_specrun_wrapper = $command
+monitor_wrapper  = $command
+name             = gcc
+need_math        = yes
+no_input_handler = close
+no_monitor       = 
+note_preenv      = 0
+notes_plat_sysinfo_000 =  Sysinfo program /home/xb/spec/Docs/sysinfo
+notes_plat_sysinfo_005 =  $Rev: 6775 $ $Date:: 2011-08-16 \#$ 8787f7622badcf24e01c368b1db4377c
+notes_plat_sysinfo_010 =  running on giga Sat Dec  3 22:00:53 2016
+notes_plat_sysinfo_015 = 
+notes_plat_sysinfo_020 =  This section contains SUT (System Under Test) info as seen by
+notes_plat_sysinfo_025 =  some common utilities.  To remove or add to this section, see:
+notes_plat_sysinfo_030 =    http://www.spec.org/cpu2006/Docs/config.html\#sysinfo
+notes_plat_sysinfo_035 = 
+notes_plat_sysinfo_040 =  From /proc/cpuinfo
+notes_plat_sysinfo_045 =     model name : Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz
+notes_plat_sysinfo_050 =        1 "physical id"s (chips)
+notes_plat_sysinfo_055 =        8 "processors"
+notes_plat_sysinfo_060 =     cores, siblings (Caution: counting these is hw and system dependent.  The
+notes_plat_sysinfo_065 =     following excerpts from /proc/cpuinfo might not be reliable.  Use with
+notes_plat_sysinfo_070 =     caution.)
+notes_plat_sysinfo_075 =        cpu cores : 4
+notes_plat_sysinfo_080 =        siblings  : 8
+notes_plat_sysinfo_085 =        physical 0: cores 0 1 2 3
+notes_plat_sysinfo_090 =     cache size : 8192 KB
+notes_plat_sysinfo_095 = 
+notes_plat_sysinfo_100 =  From /proc/meminfo
+notes_plat_sysinfo_105 =     MemTotal:       63558700 kB
+notes_plat_sysinfo_110 =     HugePages_Total:       0
+notes_plat_sysinfo_115 =     Hugepagesize:       2048 kB
+notes_plat_sysinfo_120 = 
+notes_plat_sysinfo_125 =  /usr/bin/lsb_release -d
+notes_plat_sysinfo_130 =     Ubuntu 16.10
+notes_plat_sysinfo_135 = 
+notes_plat_sysinfo_140 =  From /etc/*release* /etc/*version*
+notes_plat_sysinfo_145 =     debian_version: stretch/sid
+notes_plat_sysinfo_150 =     os-release:
+notes_plat_sysinfo_155 =        NAME="Ubuntu"
+notes_plat_sysinfo_160 =        VERSION="16.10 (Yakkety Yak)"
+notes_plat_sysinfo_165 =        ID=ubuntu
+notes_plat_sysinfo_170 =        ID_LIKE=debian
+notes_plat_sysinfo_175 =        PRETTY_NAME="Ubuntu 16.10"
+notes_plat_sysinfo_180 =        VERSION_ID="16.10"
+notes_plat_sysinfo_185 =        HOME_URL="http://www.ubuntu.com/"
+notes_plat_sysinfo_190 =        SUPPORT_URL="http://help.ubuntu.com/"
+notes_plat_sysinfo_195 = 
+notes_plat_sysinfo_200 =  uname -a:
+notes_plat_sysinfo_205 =     Linux giga 4.8.0-27-generic \#29-Ubuntu SMP Thu Oct 20 21:03:13 UTC 2016
+notes_plat_sysinfo_210 =     x86_64 x86_64 x86_64 GNU/Linux
+notes_plat_sysinfo_215 = 
+notes_plat_sysinfo_220 =  run-level 5 Dec 1 21:13
+notes_plat_sysinfo_225 = 
+notes_plat_sysinfo_230 =  SPEC is set to: /home/xb/spec
+notes_plat_sysinfo_235 =     Filesystem     Type  Size  Used Avail Use% Mounted on
+notes_plat_sysinfo_240 =     /dev/sda5      ext4  357G  339G  256K 100% /
+notes_plat_sysinfo_245 = 
+notes_plat_sysinfo_250 =  (End of data from sysinfo program)
+notes_wrap_columns = 0
+notes_wrap_indent =   
+num              = 403
+obiwan           = 
+os_exe_ext       = 
+output           = asc
+output_format    = asc, Screen
+output_root      = 
+outputdir        = output
+parallel_setup   = 1
+parallel_setup_prefork = 
+parallel_setup_type = fork
+parallel_test    = 0
+parallel_test_submit = 0
+parallel_test_workloads = 
+path             = /home/xb/spec/benchspec/CPU2006/403.gcc
+plain_train      = 1
+power            = 0
+preenv           = 1
+prefix           = 
+prepared_by      = xb  (is never output, only tags rawfile)
+ranks            = 1
+rate             = 0
+realuser         = your name here
+rebuild          = 0
+reftime          = reftime
+reltol           = 
+reportable       = 0
+resultdir        = result
+review           = 0
+run              = all
+rundir           = run
+runspec          = /home/xb/spec/bin/runspec -c mpx_findbug -a run -I -l --size test -n 1 all_c
+safe_eval        = 1
+section_specifier_fatal = 1
+sendmail         = /usr/sbin/sendmail
+setpgrp_enabled  = 1
+setprocgroup     = 1
+setup_error      = 0
+shrate           = 0
+sigint           = 2
+size             = test
+size_class       = test
+skipabstol       = 
+skipobiwan       = 
+skipreltol       = 
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff
+specmake         = Makefile.YYYtArGeTYYYspec
+specrun          = specinvoke
+speed            = 0
+srcalt           = 
+srcdir           = src
+srcsource        = /home/xb/spec/benchspec/CPU2006/403.gcc/src
+stagger          = 10
+strict_rundir_verify = 0
+sw_file          = ext4
+sw_os001         = Ubuntu 16.10
+sw_os002         = 4.8.0-27-generic
+sw_state         = Run level 5 (add definition here)
+sysinfo_program  = specperl /home/xb/spec/Docs/sysinfo
+table            = 1
+teeout           = yes
+teerunout        = yes
+test_date        = Dec-2016
+top              = /home/xb/spec
+train_with       = train
+tune             = base
+uid              = 1000
+unbuffer         = 1
+update-flags     = 0
+use_submit_for_speed = 0
+username         = xb
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+version_url      = http://www.spec.org/auto/cpu2006/current_version
+worklist         = list
+OUTPUT_RMFILES   = integrate.s
+  Compile for '403.gcc' started at: Sat Dec  3 22:01:07 2016 (1480820467)
+Issuing make.clean command 'specmake -j20 clean'
+specmake -j20 clean 2> make.clean.err | tee make.clean.out
+Start make.clean command: Sat Dec  3 22:01:07 2016 (1480820467)
+rm -rf *.o  integrate.s
+find . \( -name \*.o -o -name '*.fppized.f*' -o -name '*.i' -o -name '*.mod' \) -print | xargs rm -rf
+rm -rf gcc
+rm -rf gcc.exe
+rm -rf core
+rm -rf 
+Stop make.clean command: Sat Dec  3 22:01:07 2016 (1480820467)
+Elapsed time for make.clean command: 00:00:00 (0)
+Issuing make command 'specmake -j20 build'
+specmake -j20 build 2> make.err | tee make.out
+Start make command: Sat Dec  3 22:01:07 2016 (1480820467)
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o alloca.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         alloca.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o asprintf.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         asprintf.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o vasprintf.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         vasprintf.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o c-parse.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         c-parse.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o c-lang.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         c-lang.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o attribs.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         attribs.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o c-errors.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         c-errors.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o c-lex.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         c-lex.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o c-pragma.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         c-pragma.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o c-decl.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         c-decl.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o c-typeck.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         c-typeck.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o c-convert.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         c-convert.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o c-aux-info.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         c-aux-info.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o c-common.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         c-common.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o c-format.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         c-format.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o c-semantics.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         c-semantics.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o c-objc-common.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         c-objc-common.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o main.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         main.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o cpplib.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         cpplib.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o cpplex.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         cpplex.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o cppmacro.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         cppmacro.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o cppexp.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         cppexp.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o cppfiles.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         cppfiles.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o cpphash.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         cpphash.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o cpperror.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         cpperror.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o cppinit.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         cppinit.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o cppdefault.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         cppdefault.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o line-map.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         line-map.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o mkdeps.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         mkdeps.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o prefix.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         prefix.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o version.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         version.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o mbchar.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         mbchar.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o alias.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         alias.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o bb-reorder.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         bb-reorder.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o bitmap.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         bitmap.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o builtins.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         builtins.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o caller-save.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         caller-save.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o calls.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         calls.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o cfg.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         cfg.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o cfganal.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         cfganal.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o cfgbuild.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         cfgbuild.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o cfgcleanup.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         cfgcleanup.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o cfglayout.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         cfglayout.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o cfgloop.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         cfgloop.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o cfgrtl.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         cfgrtl.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o combine.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         combine.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o conflict.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         conflict.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o convert.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         convert.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o cse.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         cse.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o cselib.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         cselib.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o dbxout.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         dbxout.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o debug.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         debug.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o dependence.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         dependence.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o df.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         df.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o diagnostic.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         diagnostic.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o doloop.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         doloop.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o dominance.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         dominance.c
+diagnostic.c: In function 'vbuild_message_string':
+diagnostic.c:750:3: warning: ignoring return value of 'vasprintf', declared with attribute warn_unused_result [-Wunused-result]
+   vasprintf (&str, msg, ap);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o dwarf2asm.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         dwarf2asm.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o dwarf2out.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         dwarf2out.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o dwarfout.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         dwarfout.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o emit-rtl.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         emit-rtl.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o except.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         except.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o explow.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         explow.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o expmed.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         expmed.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o expr.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         expr.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o final.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         final.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o flow.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         flow.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o fold-const.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         fold-const.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o function.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         function.c
+final.c: In function 'output_operand_lossage':
+final.c:2971:3: warning: ignoring return value of 'asprintf', declared with attribute warn_unused_result [-Wunused-result]
+   asprintf (&fmt_string, "%s%s", pfx_str, _(msgid));
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+final.c:2972:3: warning: ignoring return value of 'vasprintf', declared with attribute warn_unused_result [-Wunused-result]
+   vasprintf (&new_message, fmt_string, ap);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o gcse.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         gcse.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o genrtl.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         genrtl.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o ggc-common.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         ggc-common.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o global.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         global.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o graph.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         graph.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o haifa-sched.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         haifa-sched.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o hash.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         hash.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o hashtable.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         hashtable.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o hooks.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         hooks.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o ifcvt.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         ifcvt.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o insn-attrtab.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         insn-attrtab.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o insn-emit.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         insn-emit.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o insn-extract.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         insn-extract.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o insn-opinit.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         insn-opinit.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o insn-output.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         insn-output.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o insn-peep.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         insn-peep.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o insn-recog.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         insn-recog.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o integrate.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         integrate.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o intl.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         intl.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o jump.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         jump.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o langhooks.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         langhooks.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o lcm.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         lcm.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o lists.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         lists.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o local-alloc.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         local-alloc.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o loop.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         loop.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o obstack.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         obstack.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o optabs.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         optabs.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o params.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         params.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o predict.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         predict.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o print-rtl.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         print-rtl.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o print-tree.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         print-tree.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o profile.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         profile.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o real.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         real.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o recog.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         recog.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o reg-stack.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         reg-stack.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o regclass.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         regclass.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o regmove.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         regmove.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o regrename.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         regrename.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o reload.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         reload.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o reload1.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         reload1.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o reorg.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         reorg.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o resource.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         resource.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o rtl.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         rtl.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o rtlanal.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         rtlanal.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o rtl-error.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         rtl-error.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o sbitmap.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         sbitmap.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o sched-deps.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         sched-deps.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o sched-ebb.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         sched-ebb.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o sched-rgn.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         sched-rgn.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o sched-vis.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         sched-vis.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o sdbout.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         sdbout.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o sibcall.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         sibcall.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o simplify-rtx.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         simplify-rtx.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o ssa.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         ssa.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o ssa-ccp.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         ssa-ccp.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o ssa-dce.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         ssa-dce.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o stmt.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         stmt.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o stor-layout.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         stor-layout.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o stringpool.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         stringpool.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o timevar.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         timevar.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o toplev.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         toplev.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o tree.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         tree.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o tree-dump.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         tree-dump.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o tree-inline.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         tree-inline.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o unroll.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         unroll.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o varasm.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         varasm.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o varray.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         varray.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o vmsdbgout.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         vmsdbgout.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o xcoffout.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         xcoffout.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o ggc-page.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         ggc-page.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o i386.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         i386.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o xmalloc.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         xmalloc.c
+ggc-page.c: In function 'ggc_print_statistics':
+ggc-page.c:1523:28: warning: format '%d' expects argument of type 'int', but argument 3 has type 'size_t {aka long unsigned int}' [-Wformat=]
+       fprintf (stderr, "%-5d %10ld%c %10ld%c %10ld%c\n", OBJECT_SIZE (i),
+                            ^
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o xexit.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         xexit.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o hashtab.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         hashtab.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o safe-ctype.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         safe-ctype.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o splay-tree.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         splay-tree.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o xstrdup.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         xstrdup.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o md5.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         md5.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o fibheap.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         fibheap.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o xstrerror.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         xstrerror.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o concat.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         concat.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o partition.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         partition.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o hex.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         hex.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o lbasename.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         lbasename.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o getpwd.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         getpwd.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o ucbqsort.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         ucbqsort.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native   -O3  -DSPEC_CPU_LP64        alloca.o asprintf.o vasprintf.o c-parse.o c-lang.o attribs.o c-errors.o c-lex.o c-pragma.o c-decl.o c-typeck.o c-convert.o c-aux-info.o c-common.o c-format.o c-semantics.o c-objc-common.o main.o cpplib.o cpplex.o cppmacro.o cppexp.o cppfiles.o cpphash.o cpperror.o cppinit.o cppdefault.o line-map.o mkdeps.o prefix.o version.o mbchar.o alias.o bb-reorder.o bitmap.o builtins.o caller-save.o calls.o cfg.o cfganal.o cfgbuild.o cfgcleanup.o cfglayout.o cfgloop.o cfgrtl.o combine.o conflict.o convert.o cse.o cselib.o dbxout.o debug.o dependence.o df.o diagnostic.o doloop.o dominance.o dwarf2asm.o dwarf2out.o dwarfout.o emit-rtl.o except.o explow.o expmed.o expr.o final.o flow.o fold-const.o function.o gcse.o genrtl.o ggc-common.o global.o graph.o haifa-sched.o hash.o hashtable.o hooks.o ifcvt.o insn-attrtab.o insn-emit.o insn-extract.o insn-opinit.o insn-output.o insn-peep.o insn-recog.o integrate.o intl.o jump.o langhooks.o lcm.o lists.o local-alloc.o loop.o obstack.o optabs.o params.o predict.o print-rtl.o print-tree.o profile.o real.o recog.o reg-stack.o regclass.o regmove.o regrename.o reload.o reload1.o reorg.o resource.o rtl.o rtlanal.o rtl-error.o sbitmap.o sched-deps.o sched-ebb.o sched-rgn.o sched-vis.o sdbout.o sibcall.o simplify-rtx.o ssa.o ssa-ccp.o ssa-dce.o stmt.o stor-layout.o stringpool.o timevar.o toplev.o tree.o tree-dump.o tree-inline.o unroll.o varasm.o varray.o vmsdbgout.o xcoffout.o ggc-page.o i386.o xmalloc.o xexit.o hashtab.o safe-ctype.o splay-tree.o xstrdup.o md5.o fibheap.o xstrerror.o concat.o partition.o hex.o lbasename.o getpwd.o ucbqsort.o             -lm        -o gcc
+Stop make command: Sat Dec  3 22:01:45 2016 (1480820505)
+Elapsed time for make command: 00:00:38 (38)
+Issuing options command 'specmake -j20 options'
+specmake -j20 options 2> options.err | tee options.out
+Start options command: Sat Dec  3 22:01:45 2016 (1480820505)
+COMP: gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o options.o -DSPEC_CPU -DNDEBUG -I.   -O3       -DSPEC_CPU_LP64         <source>
+C: CC="gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC_CPU -DNDEBUG"
+P: BENCH_FLAGS="-I."
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE="-O3"
+P: PORTABILITY="-DSPEC_CPU_LP64"
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_CPORTABILITY=""
+LINK: gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native   -O3  -DSPEC_CPU_LP64        <objects>   -lm        -o options
+C: LD="gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native"
+O: COPTIMIZE="-O3"
+P: PORTABILITY="-DSPEC_CPU_LP64"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+Stop options command: Sat Dec  3 22:01:45 2016 (1480820505)
+Elapsed time for options command: 00:00:00 (0)
+  Compile for '403.gcc' ended at: Sat Dec  3 22:01:45 2016 (1480820505)
+  Elapsed compile for '403.gcc': 00:00:38 (38)
+
+ERROR: Copying gcc to /home/xb/spec/benchspec/CPU2006/403.gcc/exe/gcc_base.mpx_findbug failed: No space left on device
+  in copy_file:
+ at /home/xb/spec/bin/benchmark.pm line 1741
+	Spec::Benchmark::build('Spec::Benchmark::gcc403=HASH(0x7f8595f69050)', 'Spec::Listfile::entry=HASH(0x7f8595f85520)', '') called at /home/xb/spec/bin/runspec line 762
+
+
+ERROR: Copying executable from build dir to exe dir FAILED!
+*** Error building 403.gcc
+
+------------------------------------------------------------------------
+When checking options for /home/xb/spec/benchspec/CPU2006/429.mcf/exe/mcf_base.mpx_findbug, no MD5 sums were
+  found in the config file.  They will be installed after build.
+  Building 429.mcf base mpx_findbug default: (build_base_mpx_findbug.0000)
+ERROR: Cannot create build directory for 429.mcf: mkdir /home/xb/spec/benchspec/CPU2006/429.mcf/build/build_base_mpx_findbug.0000: No space left on device at /home/xb/spec/bin/benchmark.pm line 1253
+
+*** Error building 429.mcf
+
+------------------------------------------------------------------------
+When checking options for /home/xb/spec/benchspec/CPU2006/433.milc/exe/milc_base.mpx_findbug, no MD5 sums were
+  found in the config file.  They will be installed after build.
+  Building 433.milc base mpx_findbug default: (build_base_mpx_findbug.0000)
+Wrote to makefile '/home/xb/spec/benchspec/CPU2006/433.milc/build/build_base_mpx_findbug.0000/Makefile.deps':
+
+# These are the build dependencies
+
+# End dependencies
+Wrote to makefile '/home/xb/spec/benchspec/CPU2006/433.milc/build/build_base_mpx_findbug.0000/Makefile.spec':
+TUNE=base
+EXT=mpx_findbug
+NUMBER=433
+NAME=milc
+SOURCES= control.c f_meas.c gauge_info.c setup.c update.c update_h.c \
+	 update_u.c layout_hyper.c check_unitarity.c d_plaq4.c gaugefix2.c \
+	 io_helpers.c io_lat4.c make_lattice.c path_product.c ploop3.c ranmom.c \
+	 ranstuff.c reunitarize2.c gauge_stuff.c grsource_imp.c mat_invert.c \
+	 quark_stuff.c rephase.c cmplx.c addmat.c addvec.c clear_mat.c clearvec.c \
+	 m_amatvec.c m_mat_an.c m_mat_na.c m_mat_nn.c m_matvec.c make_ahmat.c \
+	 rand_ahmat.c realtr.c s_m_a_mat.c s_m_a_vec.c s_m_s_mat.c s_m_vec.c \
+	 s_m_mat.c su3_adjoint.c su3_dot.c su3_rdot.c su3_proj.c su3mat_copy.c \
+	 submat.c subvec.c trace_su3.c uncmp_ahmat.c msq_su3vec.c sub4vecs.c \
+	 m_amv_4dir.c m_amv_4vec.c m_mv_s_4dir.c m_su2_mat_vec_n.c l_su2_hit_n.c \
+	 r_su2_hit_a.c m_su2_mat_vec_a.c gaussrand.c byterevn.c m_mat_hwvec.c \
+	 m_amat_hwvec.c dslash_fn2.c d_congrad5_fn.c com_vanilla.c io_nonansi.c
+EXEBASE=milc
+NEED_MATH=yes
+BENCHLANG=C
+ONESTEP=
+CONESTEP=
+
+BENCH_FLAGS      = -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS
+CC               = gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native
+COPTIMIZE        = -O3
+CXX              = g++             -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native
+CXXOPTIMIZE      = -O3
+EXTRA_LIBS       = 
+FC               = echo     -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native
+FPBASE           = yes
+OS               = unix
+PORTABILITY      = -DSPEC_CPU_LP64
+absolutely_no_locking = 0
+action           = validate
+allow_extension_override = 0
+backup_config    = 1
+baseexe          = milc
+basepeak         = 0
+benchdir         = benchspec
+benchmark        = 433.milc
+binary           = 
+bindir           = exe
+build_in_build_dir = 1
+builddir         = build
+bundleaction     = 
+bundlename       = 
+calctol          = 0
+changedmd5       = 0
+check_integrity  = 1
+check_md5        = 1
+check_version    = 1
+clean_between_builds = no
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = milc_base.mpx_findbug
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+commandstdoutfile = speccmds.stdout
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+comparestdoutfile = compare.stdout
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = /home/xb/spec/config/mpx_findbug.cfg
+copies           = 1
+datadir          = data
+default_size     = ref
+delay            = 0
+deletebinaries   = 0
+deletework       = 0
+dependent_workloads = 0
+difflines        = 10
+dirprot          = 511
+endian           = 12345678
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+expid            = 
+ext              = mpx_findbug
+fake             = 0
+feedback         = 1
+flag_url_base    = http://www.spec.org/auto/cpu2006/flags/
+floatcompare     = 
+help             = 0
+http_proxy       = 
+http_timeout     = 30
+hw_cpu_name      = Intel Core i7-6700K
+hw_disk          = 357 GB  add more disk info here
+hw_memory001     = 60.614 GB fixme: If using DDR3, format is:
+hw_memory002     = 'N GB (M x N GB nRxn PCn-nnnnnR-n, ECC)'
+hw_nchips        = 1
+ignore_errors    = 1
+ignore_sigint    = 0
+ignorecase       = 
+info_wrap_columns = 50
+inputdir         = input
+iteration        = -1
+iterations       = 1
+keeptmp          = 0
+line_width       = 0
+locking          = 1
+log              = CPU2006
+log_line_width   = 0
+log_timestamp    = 0
+logname          = /home/xb/spec/result/CPU2006.010.log
+lognum           = 010
+mach             = default
+mail_reports     = all
+mailcompress     = 0
+mailmethod       = smtp
+mailport         = 25
+mailserver       = 127.0.0.1
+mailto           = 
+make             = specmake
+make_no_clobber  = 0
+makeflags        = -j20
+max_active_compares = 0
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+monitor_specrun_wrapper = $command
+monitor_wrapper  = $command
+name             = milc
+need_math        = yes
+no_input_handler = close
+no_monitor       = 
+note_preenv      = 0
+notes_plat_sysinfo_000 =  Sysinfo program /home/xb/spec/Docs/sysinfo
+notes_plat_sysinfo_005 =  $Rev: 6775 $ $Date:: 2011-08-16 \#$ 8787f7622badcf24e01c368b1db4377c
+notes_plat_sysinfo_010 =  running on giga Sat Dec  3 22:00:53 2016
+notes_plat_sysinfo_015 = 
+notes_plat_sysinfo_020 =  This section contains SUT (System Under Test) info as seen by
+notes_plat_sysinfo_025 =  some common utilities.  To remove or add to this section, see:
+notes_plat_sysinfo_030 =    http://www.spec.org/cpu2006/Docs/config.html\#sysinfo
+notes_plat_sysinfo_035 = 
+notes_plat_sysinfo_040 =  From /proc/cpuinfo
+notes_plat_sysinfo_045 =     model name : Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz
+notes_plat_sysinfo_050 =        1 "physical id"s (chips)
+notes_plat_sysinfo_055 =        8 "processors"
+notes_plat_sysinfo_060 =     cores, siblings (Caution: counting these is hw and system dependent.  The
+notes_plat_sysinfo_065 =     following excerpts from /proc/cpuinfo might not be reliable.  Use with
+notes_plat_sysinfo_070 =     caution.)
+notes_plat_sysinfo_075 =        cpu cores : 4
+notes_plat_sysinfo_080 =        siblings  : 8
+notes_plat_sysinfo_085 =        physical 0: cores 0 1 2 3
+notes_plat_sysinfo_090 =     cache size : 8192 KB
+notes_plat_sysinfo_095 = 
+notes_plat_sysinfo_100 =  From /proc/meminfo
+notes_plat_sysinfo_105 =     MemTotal:       63558700 kB
+notes_plat_sysinfo_110 =     HugePages_Total:       0
+notes_plat_sysinfo_115 =     Hugepagesize:       2048 kB
+notes_plat_sysinfo_120 = 
+notes_plat_sysinfo_125 =  /usr/bin/lsb_release -d
+notes_plat_sysinfo_130 =     Ubuntu 16.10
+notes_plat_sysinfo_135 = 
+notes_plat_sysinfo_140 =  From /etc/*release* /etc/*version*
+notes_plat_sysinfo_145 =     debian_version: stretch/sid
+notes_plat_sysinfo_150 =     os-release:
+notes_plat_sysinfo_155 =        NAME="Ubuntu"
+notes_plat_sysinfo_160 =        VERSION="16.10 (Yakkety Yak)"
+notes_plat_sysinfo_165 =        ID=ubuntu
+notes_plat_sysinfo_170 =        ID_LIKE=debian
+notes_plat_sysinfo_175 =        PRETTY_NAME="Ubuntu 16.10"
+notes_plat_sysinfo_180 =        VERSION_ID="16.10"
+notes_plat_sysinfo_185 =        HOME_URL="http://www.ubuntu.com/"
+notes_plat_sysinfo_190 =        SUPPORT_URL="http://help.ubuntu.com/"
+notes_plat_sysinfo_195 = 
+notes_plat_sysinfo_200 =  uname -a:
+notes_plat_sysinfo_205 =     Linux giga 4.8.0-27-generic \#29-Ubuntu SMP Thu Oct 20 21:03:13 UTC 2016
+notes_plat_sysinfo_210 =     x86_64 x86_64 x86_64 GNU/Linux
+notes_plat_sysinfo_215 = 
+notes_plat_sysinfo_220 =  run-level 5 Dec 1 21:13
+notes_plat_sysinfo_225 = 
+notes_plat_sysinfo_230 =  SPEC is set to: /home/xb/spec
+notes_plat_sysinfo_235 =     Filesystem     Type  Size  Used Avail Use% Mounted on
+notes_plat_sysinfo_240 =     /dev/sda5      ext4  357G  339G  256K 100% /
+notes_plat_sysinfo_245 = 
+notes_plat_sysinfo_250 =  (End of data from sysinfo program)
+notes_wrap_columns = 0
+notes_wrap_indent =   
+num              = 433
+obiwan           = 
+os_exe_ext       = 
+output           = asc
+output_format    = asc, Screen
+output_root      = 
+outputdir        = output
+parallel_setup   = 1
+parallel_setup_prefork = 
+parallel_setup_type = fork
+parallel_test    = 0
+parallel_test_submit = 0
+parallel_test_workloads = 
+path             = /home/xb/spec/benchspec/CPU2006/433.milc
+plain_train      = 1
+power            = 0
+preenv           = 1
+prefix           = 
+prepared_by      = xb  (is never output, only tags rawfile)
+ranks            = 1
+rate             = 0
+realuser         = your name here
+rebuild          = 0
+reftime          = reftime
+reportable       = 0
+resultdir        = result
+review           = 0
+run              = all
+rundir           = run
+runspec          = /home/xb/spec/bin/runspec -c mpx_findbug -a run -I -l --size test -n 1 all_c
+safe_eval        = 1
+section_specifier_fatal = 1
+sendmail         = /usr/sbin/sendmail
+setpgrp_enabled  = 1
+setprocgroup     = 1
+setup_error      = 0
+shrate           = 0
+sigint           = 2
+size             = test
+size_class       = test
+skipabstol       = 
+skipobiwan       = 
+skipreltol       = 
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff
+specmake         = Makefile.YYYtArGeTYYYspec
+specrun          = specinvoke
+speed            = 0
+srcalt           = 
+srcdir           = src
+srcsource        = /home/xb/spec/benchspec/CPU2006/433.milc/src
+stagger          = 10
+strict_rundir_verify = 0
+sw_file          = ext4
+sw_os001         = Ubuntu 16.10
+sw_os002         = 4.8.0-27-generic
+sw_state         = Run level 5 (add definition here)
+sysinfo_program  = specperl /home/xb/spec/Docs/sysinfo
+table            = 1
+teeout           = yes
+teerunout        = yes
+test_date        = Dec-2016
+top              = /home/xb/spec
+train_with       = train
+tune             = base
+uid              = 1000
+unbuffer         = 1
+update-flags     = 0
+use_submit_for_speed = 0
+username         = xb
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+version_url      = http://www.spec.org/auto/cpu2006/current_version
+worklist         = list
+OUTPUT_RMFILES   = su3imp.out
+  Compile for '433.milc' started at: Sat Dec  3 22:01:45 2016 (1480820505)
+Issuing make.clean command 'specmake -j20 clean'
+specmake -j20 clean 2> make.clean.err | tee make.clean.out
+Start make.clean command: Sat Dec  3 22:01:45 2016 (1480820505)
+rm -rf *.o  su3imp.out
+find . \( -name \*.o -o -name '*.fppized.f*' -o -name '*.i' -o -name '*.mod' \) -print | xargs rm -rf
+rm -rf milc
+rm -rf milc.exe
+rm -rf core
+rm -rf 
+Stop make.clean command: Sat Dec  3 22:01:45 2016 (1480820505)
+Elapsed time for make.clean command: 00:00:00 (0)
+Issuing make command 'specmake -j20 build'
+specmake -j20 build 2> make.err | tee make.out
+Start make command: Sat Dec  3 22:01:45 2016 (1480820505)
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o control.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         control.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o f_meas.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         f_meas.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o gauge_info.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         gauge_info.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o setup.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         setup.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o update.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         update.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o update_h.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         update_h.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o update_u.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         update_u.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o layout_hyper.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         layout_hyper.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o check_unitarity.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         check_unitarity.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o d_plaq4.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         d_plaq4.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o gaugefix2.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         gaugefix2.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o io_helpers.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         io_helpers.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o io_lat4.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         io_lat4.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o make_lattice.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         make_lattice.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o path_product.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         path_product.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o ploop3.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         ploop3.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o ranmom.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         ranmom.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o ranstuff.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         ranstuff.c
+io_lat4.c: In function 'qcdhdr_get_hdr':
+io_lat4.c:195:11: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+     len = (int) q - (int) line;
+           ^
+io_lat4.c:195:21: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+     len = (int) q - (int) line;
+                     ^
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o reunitarize2.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         reunitarize2.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o gauge_stuff.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         gauge_stuff.c
+io_lat4.c: In function 'read_gauge_hdr':
+io_lat4.c:1334:37: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+        (char *)GAUGE_VERSION_NUMBER,(char *)tmp);
+                                     ^
+io_lat4.c: In function 'qcdhdr_get_hdr':
+io_lat4.c:169:3: warning: ignoring return value of 'fgets', declared with attribute warn_unused_result [-Wunused-result]
+   fgets(line,MAX_LINE_LENGTH,in);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+io_lat4.c:185:5: warning: ignoring return value of 'fgets', declared with attribute warn_unused_result [-Wunused-result]
+     fgets(line,MAX_LINE_LENGTH,in);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+io_helpers.c: In function 'get_f':
+io_helpers.c:275:4: warning: ignoring return value of 'scanf', declared with attribute warn_unused_result [-Wunused-result]
+    scanf("%s",checkname);
+    ^~~~~~~~~~~~~~~~~~~~~
+io_helpers.c: In function 'get_i':
+io_helpers.c:327:2: warning: ignoring return value of 'scanf', declared with attribute warn_unused_result [-Wunused-result]
+  scanf("%s",checkname);
+  ^~~~~~~~~~~~~~~~~~~~~
+io_helpers.c: In function 'get_prompt':
+io_helpers.c:433:5: warning: ignoring return value of 'scanf', declared with attribute warn_unused_result [-Wunused-result]
+     scanf("%s",initial_prompt);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+io_helpers.c:435:8: warning: ignoring return value of 'scanf', declared with attribute warn_unused_result [-Wunused-result]
+        scanf("%d",prompt);
+        ^~~~~~~~~~~~~~~~~~
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o grsource_imp.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         grsource_imp.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o mat_invert.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         mat_invert.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o quark_stuff.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         quark_stuff.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o rephase.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         rephase.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o cmplx.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         cmplx.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o addmat.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         addmat.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o addvec.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         addvec.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o clear_mat.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         clear_mat.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o clearvec.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         clearvec.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o m_amatvec.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         m_amatvec.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o m_mat_an.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         m_mat_an.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o m_mat_na.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         m_mat_na.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o m_mat_nn.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         m_mat_nn.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o m_matvec.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         m_matvec.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o make_ahmat.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         make_ahmat.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o rand_ahmat.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         rand_ahmat.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o realtr.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         realtr.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o s_m_a_mat.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         s_m_a_mat.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o s_m_a_vec.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         s_m_a_vec.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o s_m_s_mat.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         s_m_s_mat.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o s_m_vec.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         s_m_vec.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o s_m_mat.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         s_m_mat.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o su3_adjoint.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         su3_adjoint.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o su3_dot.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         su3_dot.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o su3_rdot.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         su3_rdot.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o su3_proj.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         su3_proj.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o su3mat_copy.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         su3mat_copy.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o submat.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         submat.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o subvec.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         subvec.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o trace_su3.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         trace_su3.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o uncmp_ahmat.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         uncmp_ahmat.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o msq_su3vec.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         msq_su3vec.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o sub4vecs.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         sub4vecs.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o m_amv_4dir.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         m_amv_4dir.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o m_amv_4vec.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         m_amv_4vec.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o m_mv_s_4dir.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         m_mv_s_4dir.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o m_su2_mat_vec_n.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         m_su2_mat_vec_n.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o l_su2_hit_n.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         l_su2_hit_n.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o r_su2_hit_a.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         r_su2_hit_a.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o m_su2_mat_vec_a.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         m_su2_mat_vec_a.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o gaussrand.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         gaussrand.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o byterevn.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         byterevn.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o m_mat_hwvec.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         m_mat_hwvec.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o m_amat_hwvec.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         m_amat_hwvec.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o dslash_fn2.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         dslash_fn2.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o d_congrad5_fn.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         d_congrad5_fn.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o com_vanilla.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         com_vanilla.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o io_nonansi.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         io_nonansi.c
+In file included from generic_includes.h:13:0,
+                 from com_vanilla.c:83:
+com_vanilla.c: In function 'field_pointer_at_direction':
+macros.h:45:29: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+ #define F_PT( site , fo )  ((char *)( site ) + (fo))
+                             ^
+com_vanilla.c:843:13: note: in expansion of macro 'F_PT'
+     return( F_PT( neighbor[direction][s-lattice], field ) );
+             ^~~~
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native   -O3  -DSPEC_CPU_LP64        control.o f_meas.o gauge_info.o setup.o update.o update_h.o update_u.o layout_hyper.o check_unitarity.o d_plaq4.o gaugefix2.o io_helpers.o io_lat4.o make_lattice.o path_product.o ploop3.o ranmom.o ranstuff.o reunitarize2.o gauge_stuff.o grsource_imp.o mat_invert.o quark_stuff.o rephase.o cmplx.o addmat.o addvec.o clear_mat.o clearvec.o m_amatvec.o m_mat_an.o m_mat_na.o m_mat_nn.o m_matvec.o make_ahmat.o rand_ahmat.o realtr.o s_m_a_mat.o s_m_a_vec.o s_m_s_mat.o s_m_vec.o s_m_mat.o su3_adjoint.o su3_dot.o su3_rdot.o su3_proj.o su3mat_copy.o submat.o subvec.o trace_su3.o uncmp_ahmat.o msq_su3vec.o sub4vecs.o m_amv_4dir.o m_amv_4vec.o m_mv_s_4dir.o m_su2_mat_vec_n.o l_su2_hit_n.o r_su2_hit_a.o m_su2_mat_vec_a.o gaussrand.o byterevn.o m_mat_hwvec.o m_amat_hwvec.o dslash_fn2.o d_congrad5_fn.o com_vanilla.o io_nonansi.o             -lm        -o milc
+Stop make command: Sat Dec  3 22:01:47 2016 (1480820507)
+Elapsed time for make command: 00:00:02 (2)
+Issuing options command 'specmake -j20 options'
+specmake -j20 options 2> options.err | tee options.out
+Start options command: Sat Dec  3 22:01:47 2016 (1480820507)
+COMP: gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o options.o -DSPEC_CPU -DNDEBUG -I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS   -O3       -DSPEC_CPU_LP64         <source>
+C: CC="gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC_CPU -DNDEBUG"
+P: BENCH_FLAGS="-I. -DFN -DFAST -DCONGRAD_TMP_VECTORS -DDSLASH_TMP_LINKS"
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE="-O3"
+P: PORTABILITY="-DSPEC_CPU_LP64"
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_CPORTABILITY=""
+LINK: gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native   -O3  -DSPEC_CPU_LP64        <objects>   -lm        -o options
+C: LD="gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native"
+O: COPTIMIZE="-O3"
+P: PORTABILITY="-DSPEC_CPU_LP64"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+Stop options command: Sat Dec  3 22:01:48 2016 (1480820508)
+Elapsed time for options command: 00:00:01 (1)
+  Compile for '433.milc' ended at: Sat Dec  3 22:01:48 2016 (1480820508)
+  Elapsed compile for '433.milc': 00:00:03 (3)
+
+ERROR: Copying milc to /home/xb/spec/benchspec/CPU2006/433.milc/exe/milc_base.mpx_findbug failed: No space left on device
+  in copy_file:
+ at /home/xb/spec/bin/benchmark.pm line 1741
+	Spec::Benchmark::build('Spec::Benchmark::milc433=HASH(0x7f8595f6c140)', 'Spec::Listfile::entry=HASH(0x7f8595f8d9c8)', '') called at /home/xb/spec/bin/runspec line 762
+
+
+ERROR: Copying executable from build dir to exe dir FAILED!
+*** Error building 433.milc
+
+------------------------------------------------------------------------
+When checking options for /home/xb/spec/benchspec/CPU2006/445.gobmk/exe/gobmk_base.mpx_findbug, no MD5 sums were
+  found in the config file.  They will be installed after build.
+  Building 445.gobmk base mpx_findbug default: (build_base_mpx_findbug.0000)
+ERROR: Cannot create build directory for 445.gobmk: mkdir /home/xb/spec/benchspec/CPU2006/445.gobmk/build/build_base_mpx_findbug.0000: No space left on device at /home/xb/spec/bin/benchmark.pm line 1253
+
+*** Error building 445.gobmk
+
+------------------------------------------------------------------------
+When checking options for /home/xb/spec/benchspec/CPU2006/456.hmmer/exe/hmmer_base.mpx_findbug, no MD5 sums were
+  found in the config file.  They will be installed after build.
+  Building 456.hmmer base mpx_findbug default: (build_base_mpx_findbug.0000)
+ERROR: Cannot create build directory for 456.hmmer: mkdir /home/xb/spec/benchspec/CPU2006/456.hmmer/build/build_base_mpx_findbug.0000: No space left on device at /home/xb/spec/bin/benchmark.pm line 1253
+
+*** Error building 456.hmmer
+
+------------------------------------------------------------------------
+When checking options for /home/xb/spec/benchspec/CPU2006/458.sjeng/exe/sjeng_base.mpx_findbug, no MD5 sums were
+  found in the config file.  They will be installed after build.
+  Building 458.sjeng base mpx_findbug default: (build_base_mpx_findbug.0000)
+ERROR: Cannot create build directory for 458.sjeng: mkdir /home/xb/spec/benchspec/CPU2006/458.sjeng/build/build_base_mpx_findbug.0000: No space left on device at /home/xb/spec/bin/benchmark.pm line 1253
+
+*** Error building 458.sjeng
+
+------------------------------------------------------------------------
+When checking options for /home/xb/spec/benchspec/CPU2006/462.libquantum/exe/libquantum_base.mpx_findbug, no MD5 sums were
+  found in the config file.  They will be installed after build.
+  Building 462.libquantum base mpx_findbug default: (build_base_mpx_findbug.0000)
+ERROR: Cannot create build directory for 462.libquantum: mkdir /home/xb/spec/benchspec/CPU2006/462.libquantum/build/build_base_mpx_findbug.0000: No space left on device at /home/xb/spec/bin/benchmark.pm line 1253
+
+*** Error building 462.libquantum
+
+------------------------------------------------------------------------
+When  Building 464.h264ref base mpx_findbug default: (build_base_mpx_findbug.0000)
+ERROR: Cannot create build directory for 464.h264ref: mkdir /home/xb/spec/benchspec/CPU2006/464.h264ref/build/build_base_mpx_findbug.0000: No space left on device at /home/xb/spec/bin/benchmark.pm line 1253
+
+*** Error building 464.h264ref
+
+------------------------------------------------------------------------
+When checking options for /home/xb/spec/benchspec/CPU2006/470.lbm/exe/lbm_base.mpx_findbug, no MD5 sums were
+  found in the config file.  They will be installed after build.
+  Building 470.lbm base mpx_findbug default: (build_base_mpx_findbug.0001)
+ERROR: Cannot create build directory for 470.lbm: mkdir /home/xb/spec/benchspec/CPU2006/470.lbm/build/build_base_mpx_findbug.0001: No space left on device at /home/xb/spec/bin/benchmark.pm line 1253
+
+*** Error building 470.lbm
+
+------------------------------------------------------------------------
+When checking options for /home/xb/spec/benchspec/CPU2006/482.sphinx3/exe/sphinx_livepretend_base.mpx_findbug, no MD5 sums were
+  found in the config file.  They will be installed after build.
+  Building 482.sphinx3 base mpx_findbug default: (build_base_mpx_findbug.0000)
+Wrote to makefile '/home/xb/spec/benchspec/CPU2006/482.sphinx3/build/build_base_mpx_findbug.0000/Makefile.deps':
+
+# These are the build dependencies
+
+# End dependencies
+Wrote to makefile '/home/xb/spec/benchspec/CPU2006/482.sphinx3/build/build_base_mpx_findbug.0000/Makefile.spec':
+TUNE=base
+EXT=mpx_findbug
+NUMBER=482
+NAME=sphinx3
+SOURCES= spec_main_live_pretend.c parse_args_file.c live.c agc.c \
+	 approx_cont_mgau.c ascr.c beam.c bio.c case.c ckd_alloc.c cmd_ln.c cmn.c \
+	 cmn_prior.c cont_mgau.c dict.c dict2pid.c err.c feat.c fillpen.c glist.c \
+	 gs.c hash.c heap.c hmm.c io.c kb.c kbcore.c lextree.c lm.c lmclass.c \
+	 logs3.c mdef.c new_fe.c new_fe_sp.c profile.c specrand.c str2words.c \
+	 subvq.c tmat.c unlimit.c utt.c vector.c vithist.c wid.c
+EXEBASE=sphinx_livepretend
+NEED_MATH=yes
+BENCHLANG=C
+ONESTEP=
+CONESTEP=
+
+BENCH_FLAGS      = -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil 
+CC               = gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native
+COPTIMIZE        = -O3
+CXX              = g++             -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native
+CXXOPTIMIZE      = -O3
+EXTRA_LIBS       = 
+FC               = echo     -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native
+FPBASE           = yes
+OS               = unix
+PORTABILITY      = -DSPEC_CPU_LP64
+absolutely_no_locking = 0
+abstol           = 
+action           = validate
+allow_extension_override = 0
+backup_config    = 1
+baseexe          = sphinx_livepretend
+basepeak         = 0
+benchdir         = benchspec
+benchmark        = 482.sphinx3
+binary           = 
+bindir           = exe
+build_in_build_dir = 1
+builddir         = build
+bundleaction     = 
+bundlename       = 
+calctol          = 0
+changedmd5       = 0
+check_integrity  = 1
+check_md5        = 1
+check_version    = 1
+clean_between_builds = no
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = sphinx_livepretend_base.mpx_findbug
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+commandstdoutfile = speccmds.stdout
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+comparestdoutfile = compare.stdout
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = /home/xb/spec/config/mpx_findbug.cfg
+copies           = 1
+datadir          = data
+default_size     = ref
+delay            = 0
+deletebinaries   = 0
+deletework       = 0
+dependent_workloads = 0
+difflines        = 10
+dirprot          = 511
+endian           = 12345678
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+expid            = 
+ext              = mpx_findbug
+fake             = 0
+feedback         = 1
+flag_url_base    = http://www.spec.org/auto/cpu2006/flags/
+floatcompare     = 1
+help             = 0
+http_proxy       = 
+http_timeout     = 30
+hw_cpu_name      = Intel Core i7-6700K
+hw_disk          = 357 GB  add more disk info here
+hw_memory001     = 60.614 GB fixme: If using DDR3, format is:
+hw_memory002     = 'N GB (M x N GB nRxn PCn-nnnnnR-n, ECC)'
+hw_nchips        = 1
+ignore_errors    = 1
+ignore_sigint    = 0
+ignorecase       = 
+info_wrap_columns = 50
+inputdir         = input
+iteration        = -1
+iterations       = 1
+keeptmp          = 0
+line_width       = 0
+locking          = 1
+log              = CPU2006
+log_line_width   = 0
+log_timestamp    = 0
+logname          = /home/xb/spec/result/CPU2006.010.log
+lognum           = 010
+mach             = default
+mail_reports     = all
+mailcompress     = 0
+mailmethod       = smtp
+mailport         = 25
+mailserver       = 127.0.0.1
+mailto           = 
+make             = specmake
+make_no_clobber  = 0
+makeflags        = -j20
+max_active_compares = 0
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+monitor_specrun_wrapper = $command
+monitor_wrapper  = $command
+name             = sphinx3
+need_math        = yes
+no_input_handler = close
+no_monitor       = 
+note_preenv      = 0
+notes_plat_sysinfo_000 =  Sysinfo program /home/xb/spec/Docs/sysinfo
+notes_plat_sysinfo_005 =  $Rev: 6775 $ $Date:: 2011-08-16 \#$ 8787f7622badcf24e01c368b1db4377c
+notes_plat_sysinfo_010 =  running on giga Sat Dec  3 22:00:53 2016
+notes_plat_sysinfo_015 = 
+notes_plat_sysinfo_020 =  This section contains SUT (System Under Test) info as seen by
+notes_plat_sysinfo_025 =  some common utilities.  To remove or add to this section, see:
+notes_plat_sysinfo_030 =    http://www.spec.org/cpu2006/Docs/config.html\#sysinfo
+notes_plat_sysinfo_035 = 
+notes_plat_sysinfo_040 =  From /proc/cpuinfo
+notes_plat_sysinfo_045 =     model name : Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz
+notes_plat_sysinfo_050 =        1 "physical id"s (chips)
+notes_plat_sysinfo_055 =        8 "processors"
+notes_plat_sysinfo_060 =     cores, siblings (Caution: counting these is hw and system dependent.  The
+notes_plat_sysinfo_065 =     following excerpts from /proc/cpuinfo might not be reliable.  Use with
+notes_plat_sysinfo_070 =     caution.)
+notes_plat_sysinfo_075 =        cpu cores : 4
+notes_plat_sysinfo_080 =        siblings  : 8
+notes_plat_sysinfo_085 =        physical 0: cores 0 1 2 3
+notes_plat_sysinfo_090 =     cache size : 8192 KB
+notes_plat_sysinfo_095 = 
+notes_plat_sysinfo_100 =  From /proc/meminfo
+notes_plat_sysinfo_105 =     MemTotal:       63558700 kB
+notes_plat_sysinfo_110 =     HugePages_Total:       0
+notes_plat_sysinfo_115 =     Hugepagesize:       2048 kB
+notes_plat_sysinfo_120 = 
+notes_plat_sysinfo_125 =  /usr/bin/lsb_release -d
+notes_plat_sysinfo_130 =     Ubuntu 16.10
+notes_plat_sysinfo_135 = 
+notes_plat_sysinfo_140 =  From /etc/*release* /etc/*version*
+notes_plat_sysinfo_145 =     debian_version: stretch/sid
+notes_plat_sysinfo_150 =     os-release:
+notes_plat_sysinfo_155 =        NAME="Ubuntu"
+notes_plat_sysinfo_160 =        VERSION="16.10 (Yakkety Yak)"
+notes_plat_sysinfo_165 =        ID=ubuntu
+notes_plat_sysinfo_170 =        ID_LIKE=debian
+notes_plat_sysinfo_175 =        PRETTY_NAME="Ubuntu 16.10"
+notes_plat_sysinfo_180 =        VERSION_ID="16.10"
+notes_plat_sysinfo_185 =        HOME_URL="http://www.ubuntu.com/"
+notes_plat_sysinfo_190 =        SUPPORT_URL="http://help.ubuntu.com/"
+notes_plat_sysinfo_195 = 
+notes_plat_sysinfo_200 =  uname -a:
+notes_plat_sysinfo_205 =     Linux giga 4.8.0-27-generic \#29-Ubuntu SMP Thu Oct 20 21:03:13 UTC 2016
+notes_plat_sysinfo_210 =     x86_64 x86_64 x86_64 GNU/Linux
+notes_plat_sysinfo_215 = 
+notes_plat_sysinfo_220 =  run-level 5 Dec 1 21:13
+notes_plat_sysinfo_225 = 
+notes_plat_sysinfo_230 =  SPEC is set to: /home/xb/spec
+notes_plat_sysinfo_235 =     Filesystem     Type  Size  Used Avail Use% Mounted on
+notes_plat_sysinfo_240 =     /dev/sda5      ext4  357G  339G  256K 100% /
+notes_plat_sysinfo_245 = 
+notes_plat_sysinfo_250 =  (End of data from sysinfo program)
+notes_wrap_columns = 0
+notes_wrap_indent =   
+num              = 482
+obiwan           = 
+os_exe_ext       = 
+output           = asc
+output_format    = asc, Screen
+output_root      = 
+outputdir        = output
+parallel_setup   = 1
+parallel_setup_prefork = 
+parallel_setup_type = fork
+parallel_test    = 0
+parallel_test_submit = 0
+parallel_test_workloads = 
+path             = /home/xb/spec/benchspec/CPU2006/482.sphinx3
+plain_train      = 1
+power            = 0
+preenv           = 1
+prefix           = 
+prepared_by      = xb  (is never output, only tags rawfile)
+ranks            = 1
+rate             = 0
+realuser         = your name here
+rebuild          = 0
+reftime          = reftime
+reportable       = 0
+resultdir        = result
+review           = 0
+run              = all
+rundir           = run
+runspec          = /home/xb/spec/bin/runspec -c mpx_findbug -a run -I -l --size test -n 1 all_c
+safe_eval        = 1
+section_specifier_fatal = 1
+sendmail         = /usr/sbin/sendmail
+setpgrp_enabled  = 1
+setprocgroup     = 1
+setup_error      = 0
+shrate           = 0
+sigint           = 2
+size             = test
+size_class       = test
+skipabstol       = 
+skipobiwan       = 
+skipreltol       = 
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff
+specmake         = Makefile.YYYtArGeTYYYspec
+specrun          = specinvoke
+speed            = 0
+srcalt           = 
+srcdir           = src
+srcsource        = /home/xb/spec/benchspec/CPU2006/482.sphinx3/src
+stagger          = 10
+strict_rundir_verify = 0
+sw_file          = ext4
+sw_os001         = Ubuntu 16.10
+sw_os002         = 4.8.0-27-generic
+sw_state         = Run level 5 (add definition here)
+sysinfo_program  = specperl /home/xb/spec/Docs/sysinfo
+table            = 1
+teeout           = yes
+teerunout        = yes
+test_date        = Dec-2016
+top              = /home/xb/spec
+train_with       = train
+tune             = base
+uid              = 1000
+unbuffer         = 1
+update-flags     = 0
+use_submit_for_speed = 0
+username         = xb
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+version_url      = http://www.spec.org/auto/cpu2006/current_version
+worklist         = list
+OUTPUT_RMFILES   = an4.log considered.out total_considered.out
+  Compile for '482.sphinx3' started at: Sat Dec  3 22:01:48 2016 (1480820508)
+Issuing make.clean command 'specmake -j20 clean'
+specmake -j20 clean 2> make.clean.err | tee make.clean.out
+Start make.clean command: Sat Dec  3 22:01:48 2016 (1480820508)
+rm -rf *.o  an4.log considered.out total_considered.out
+find . \( -name \*.o -o -name '*.fppized.f*' -o -name '*.i' -o -name '*.mod' \) -print | xargs rm -rf
+rm -rf sphinx_livepretend
+rm -rf sphinx_livepretend.exe
+rm -rf core
+rm -rf 
+Stop make.clean command: Sat Dec  3 22:01:48 2016 (1480820508)
+Elapsed time for make.clean command: 00:00:00 (0)
+Issuing make command 'specmake -j20 build'
+specmake -j20 build 2> make.err | tee make.out
+Start make command: Sat Dec  3 22:01:48 2016 (1480820508)
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o spec_main_live_pretend.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         spec_main_live_pretend.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o parse_args_file.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         parse_args_file.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o live.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         live.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o agc.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         agc.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o approx_cont_mgau.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         approx_cont_mgau.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o ascr.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         ascr.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o beam.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         beam.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o bio.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         bio.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o case.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         case.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o ckd_alloc.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         ckd_alloc.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o cmd_ln.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         cmd_ln.c
+live.c: In function 'live_utt_summary':
+live.c:367:25: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long int' [-Wformat=]
+     fprintf (confp, "%22d grand total considered\n", tot_considered);
+                         ^
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o cmn.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         cmn.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o cmn_prior.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         cmn_prior.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o cont_mgau.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         cont_mgau.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o dict.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         dict.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o dict2pid.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         dict2pid.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o err.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         err.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o feat.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         feat.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o fillpen.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         fillpen.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o glist.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         glist.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o gs.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         gs.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o hash.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         hash.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o heap.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         heap.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o hmm.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         hmm.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o io.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         io.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o kb.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         kb.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o kbcore.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         kbcore.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o lextree.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         lextree.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o lm.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         lm.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o lmclass.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         lmclass.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o logs3.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         logs3.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o mdef.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         mdef.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o new_fe.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         new_fe.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o new_fe_sp.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         new_fe_sp.c
+lm.c: In function 'lm_read_dump':
+lm.c:562:2: warning: ignoring return value of 'fread', declared with attribute warn_unused_result [-Wunused-result]
+  fread (lm->bg, lm->n_bg+1,sizeof(bg_t),lm->fp);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+lm.c:570:2: warning: ignoring return value of 'fread', declared with attribute warn_unused_result [-Wunused-result]
+  fread (lm->tg,lm->n_tg,sizeof(tg_t),lm->fp);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o profile.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         profile.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o specrand.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         specrand.c
+new_fe.c: In function 'fe_process_utt':
+new_fe.c:193:90: warning: format '%d' expects argument of type 'int', but argument 5 has type 'long unsigned int' [-Wformat=]
+  fprintf(stderr,"memory alloc for cep failed in fe_process_utt()\n\tfe_create_2d(%ld,%d,%d)\n...exiting\n",(long int) (frame_count+1),FE->NUM_CEPSTRA,sizeof(float32));  /* typecast to make the compiler happy - EBG */
+                                                                                          ^
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o str2words.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         str2words.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o subvq.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         subvq.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o tmat.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         tmat.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o unlimit.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         unlimit.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o utt.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         utt.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o vector.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         vector.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o vithist.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         vithist.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o wid.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         wid.c
+utt.c: In function 'utt_end':
+utt.c:273:27: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long int' [-Wformat=]
+       fprintf (confp, "%22d considered for utterance %s\n", considered, kb->uttid );
+                           ^
+utt.c:295:4: warning: ignoring return value of 'getcwd', declared with attribute warn_unused_result [-Wunused-result]
+    getcwd (str, sizeof(str));
+    ^~~~~~~~~~~~~~~~~~~~~~~~~
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native   -O3  -DSPEC_CPU_LP64        spec_main_live_pretend.o parse_args_file.o live.o agc.o approx_cont_mgau.o ascr.o beam.o bio.o case.o ckd_alloc.o cmd_ln.o cmn.o cmn_prior.o cont_mgau.o dict.o dict2pid.o err.o feat.o fillpen.o glist.o gs.o hash.o heap.o hmm.o io.o kb.o kbcore.o lextree.o lm.o lmclass.o logs3.o mdef.o new_fe.o new_fe_sp.o profile.o specrand.o str2words.o subvq.o tmat.o unlimit.o utt.o vector.o vithist.o wid.o             -lm        -o sphinx_livepretend
+Stop make command: Sat Dec  3 22:01:50 2016 (1480820510)
+Elapsed time for make command: 00:00:02 (2)
+Issuing options command 'specmake -j20 options'
+specmake -j20 options 2> options.err | tee options.out
+Start options command: Sat Dec  3 22:01:50 2016 (1480820510)
+COMP: gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o options.o -DSPEC_CPU -DNDEBUG -I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil    -O3       -DSPEC_CPU_LP64         <source>
+C: CC="gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC_CPU -DNDEBUG"
+P: BENCH_FLAGS="-I. -DSPEC_CPU -DHAVE_CONFIG_H -I. -Ilibutil "
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE="-O3"
+P: PORTABILITY="-DSPEC_CPU_LP64"
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS=""
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_CPORTABILITY=""
+LINK: gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native   -O3  -DSPEC_CPU_LP64        <objects>   -lm        -o options
+C: LD="gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native"
+O: COPTIMIZE="-O3"
+P: PORTABILITY="-DSPEC_CPU_LP64"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+Stop options command: Sat Dec  3 22:01:50 2016 (1480820510)
+Elapsed time for options command: 00:00:00 (0)
+  Compile for '482.sphinx3' ended at: Sat Dec  3 22:01:50 2016 (1480820510)
+  Elapsed compile for '482.sphinx3': 00:00:02 (2)
+
+ERROR: Copying sphinx_livepretend to /home/xb/spec/benchspec/CPU2006/482.sphinx3/exe/sphinx_livepretend_base.mpx_findbug failed: No space left on device
+  in copy_file:
+ at /home/xb/spec/bin/benchmark.pm line 1741
+	Spec::Benchmark::build('Spec::Benchmark::sphinx3482=HASH(0x7f8595f76e50)', 'Spec::Listfile::entry=HASH(0x7f8595f95de0)', '') called at /home/xb/spec/bin/runspec line 762
+
+
+ERROR: Copying executable from build dir to exe dir FAILED!
+*** Error building 482.sphinx3
+
+------------------------------------------------------------------------
+When checking options for /home/xb/spec/benchspec/CPU2006/998.specrand/exe/specrand_base.mpx_findbug, no MD5 sums were
+  found in the config file.  They will be installed after build.
+  Building 998.specrand base mpx_findbug default: (build_base_mpx_findbug.0000)
+Wrote to makefile '/home/xb/spec/benchspec/CPU2006/998.specrand/build/build_base_mpx_findbug.0000/Makefile.deps':
+
+# These are the build dependencies
+
+# End dependencies
+Wrote to makefile '/home/xb/spec/benchspec/CPU2006/998.specrand/build/build_base_mpx_findbug.0000/Makefile.spec':
+TUNE=base
+EXT=mpx_findbug
+NUMBER=998
+NAME=specrand
+SOURCES= main.c specrand.c
+EXEBASE=specrand
+NEED_MATH=
+BENCHLANG=C
+ONESTEP=
+CONESTEP=
+
+CC               = gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native
+COPTIMIZE        = -O3
+CXX              = g++             -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native
+CXXOPTIMIZE      = -O3
+EXTRA_LIBS       = 
+FC               = echo     -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native
+FPBASE           = yes
+OS               = unix
+PORTABILITY      = -DSPEC_CPU_LP64
+absolutely_no_locking = 0
+abstol           = 
+action           = validate
+allow_extension_override = 0
+backup_config    = 1
+baseexe          = specrand
+basepeak         = 0
+benchdir         = benchspec
+benchmark        = 998.specrand
+binary           = 
+bindir           = exe
+build_in_build_dir = 1
+builddir         = build
+bundleaction     = 
+bundlename       = 
+calctol          = 0
+changedmd5       = 0
+check_integrity  = 1
+check_md5        = 1
+check_version    = 1
+clean_between_builds = no
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = specrand_base.mpx_findbug
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+commandstdoutfile = speccmds.stdout
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+comparestdoutfile = compare.stdout
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = /home/xb/spec/config/mpx_findbug.cfg
+copies           = 1
+datadir          = data
+default_size     = ref
+delay            = 0
+deletebinaries   = 0
+deletework       = 0
+dependent_workloads = 0
+difflines        = 10
+dirprot          = 511
+endian           = 12345678
+env_vars         = 0
+exitvals         = spec_exit
+expand_notes     = 0
+expid            = 
+ext              = mpx_findbug
+fake             = 0
+feedback         = 1
+flag_url_base    = http://www.spec.org/auto/cpu2006/flags/
+floatcompare     = 1
+help             = 0
+http_proxy       = 
+http_timeout     = 30
+hw_cpu_name      = Intel Core i7-6700K
+hw_disk          = 357 GB  add more disk info here
+hw_memory001     = 60.614 GB fixme: If using DDR3, format is:
+hw_memory002     = 'N GB (M x N GB nRxn PCn-nnnnnR-n, ECC)'
+hw_nchips        = 1
+ignore_errors    = 1
+ignore_sigint    = 0
+ignorecase       = 
+info_wrap_columns = 50
+inputdir         = input
+iteration        = -1
+iterations       = 1
+keeptmp          = 0
+line_width       = 0
+locking          = 1
+log              = CPU2006
+log_line_width   = 0
+log_timestamp    = 0
+logname          = /home/xb/spec/result/CPU2006.010.log
+lognum           = 010
+mach             = default
+mail_reports     = all
+mailcompress     = 0
+mailmethod       = smtp
+mailport         = 25
+mailserver       = 127.0.0.1
+mailto           = 
+make             = specmake
+make_no_clobber  = 0
+makeflags        = -j20
+max_active_compares = 0
+mean_anyway      = 0
+min_report_runs  = 3
+minimize_builddirs = 0
+minimize_rundirs = 0
+monitor_specrun_wrapper = $command
+monitor_wrapper  = $command
+name             = specrand
+need_math        = 
+no_input_handler = close
+no_monitor       = 
+note_preenv      = 0
+notes_plat_sysinfo_000 =  Sysinfo program /home/xb/spec/Docs/sysinfo
+notes_plat_sysinfo_005 =  $Rev: 6775 $ $Date:: 2011-08-16 \#$ 8787f7622badcf24e01c368b1db4377c
+notes_plat_sysinfo_010 =  running on giga Sat Dec  3 22:00:53 2016
+notes_plat_sysinfo_015 = 
+notes_plat_sysinfo_020 =  This section contains SUT (System Under Test) info as seen by
+notes_plat_sysinfo_025 =  some common utilities.  To remove or add to this section, see:
+notes_plat_sysinfo_030 =    http://www.spec.org/cpu2006/Docs/config.html\#sysinfo
+notes_plat_sysinfo_035 = 
+notes_plat_sysinfo_040 =  From /proc/cpuinfo
+notes_plat_sysinfo_045 =     model name : Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz
+notes_plat_sysinfo_050 =        1 "physical id"s (chips)
+notes_plat_sysinfo_055 =        8 "processors"
+notes_plat_sysinfo_060 =     cores, siblings (Caution: counting these is hw and system dependent.  The
+notes_plat_sysinfo_065 =     following excerpts from /proc/cpuinfo might not be reliable.  Use with
+notes_plat_sysinfo_070 =     caution.)
+notes_plat_sysinfo_075 =        cpu cores : 4
+notes_plat_sysinfo_080 =        siblings  : 8
+notes_plat_sysinfo_085 =        physical 0: cores 0 1 2 3
+notes_plat_sysinfo_090 =     cache size : 8192 KB
+notes_plat_sysinfo_095 = 
+notes_plat_sysinfo_100 =  From /proc/meminfo
+notes_plat_sysinfo_105 =     MemTotal:       63558700 kB
+notes_plat_sysinfo_110 =     HugePages_Total:       0
+notes_plat_sysinfo_115 =     Hugepagesize:       2048 kB
+notes_plat_sysinfo_120 = 
+notes_plat_sysinfo_125 =  /usr/bin/lsb_release -d
+notes_plat_sysinfo_130 =     Ubuntu 16.10
+notes_plat_sysinfo_135 = 
+notes_plat_sysinfo_140 =  From /etc/*release* /etc/*version*
+notes_plat_sysinfo_145 =     debian_version: stretch/sid
+notes_plat_sysinfo_150 =     os-release:
+notes_plat_sysinfo_155 =        NAME="Ubuntu"
+notes_plat_sysinfo_160 =        VERSION="16.10 (Yakkety Yak)"
+notes_plat_sysinfo_165 =        ID=ubuntu
+notes_plat_sysinfo_170 =        ID_LIKE=debian
+notes_plat_sysinfo_175 =        PRETTY_NAME="Ubuntu 16.10"
+notes_plat_sysinfo_180 =        VERSION_ID="16.10"
+notes_plat_sysinfo_185 =        HOME_URL="http://www.ubuntu.com/"
+notes_plat_sysinfo_190 =        SUPPORT_URL="http://help.ubuntu.com/"
+notes_plat_sysinfo_195 = 
+notes_plat_sysinfo_200 =  uname -a:
+notes_plat_sysinfo_205 =     Linux giga 4.8.0-27-generic \#29-Ubuntu SMP Thu Oct 20 21:03:13 UTC 2016
+notes_plat_sysinfo_210 =     x86_64 x86_64 x86_64 GNU/Linux
+notes_plat_sysinfo_215 = 
+notes_plat_sysinfo_220 =  run-level 5 Dec 1 21:13
+notes_plat_sysinfo_225 = 
+notes_plat_sysinfo_230 =  SPEC is set to: /home/xb/spec
+notes_plat_sysinfo_235 =     Filesystem     Type  Size  Used Avail Use% Mounted on
+notes_plat_sysinfo_240 =     /dev/sda5      ext4  357G  339G  256K 100% /
+notes_plat_sysinfo_245 = 
+notes_plat_sysinfo_250 =  (End of data from sysinfo program)
+notes_wrap_columns = 0
+notes_wrap_indent =   
+num              = 998
+obiwan           = 
+os_exe_ext       = 
+output           = asc
+output_format    = asc, Screen
+output_root      = 
+outputdir        = output
+parallel_setup   = 1
+parallel_setup_prefork = 
+parallel_setup_type = fork
+parallel_test    = 0
+parallel_test_submit = 0
+parallel_test_workloads = 
+path             = /home/xb/spec/benchspec/CPU2006/998.specrand
+plain_train      = 1
+power            = 0
+preenv           = 1
+prefix           = 
+prepared_by      = xb  (is never output, only tags rawfile)
+ranks            = 1
+rate             = 0
+realuser         = your name here
+rebuild          = 0
+reftime          = reftime
+reltol           = 
+reportable       = 0
+resultdir        = result
+review           = 0
+run              = all
+rundir           = run
+runspec          = /home/xb/spec/bin/runspec -c mpx_findbug -a run -I -l --size test -n 1 all_c
+safe_eval        = 1
+section_specifier_fatal = 1
+sendmail         = /usr/sbin/sendmail
+setpgrp_enabled  = 1
+setprocgroup     = 1
+setup_error      = 0
+shrate           = 0
+sigint           = 2
+size             = test
+size_class       = test
+skipabstol       = 
+skipobiwan       = 
+skipreltol       = 
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff
+specmake         = Makefile.YYYtArGeTYYYspec
+specrun          = specinvoke
+speed            = 0
+srcalt           = 
+srcdir           = src
+srcsource        = /home/xb/spec/benchspec/CPU2006/998.specrand/src
+stagger          = 10
+strict_rundir_verify = 0
+sw_file          = ext4
+sw_os001         = Ubuntu 16.10
+sw_os002         = 4.8.0-27-generic
+sw_state         = Run level 5 (add definition here)
+sysinfo_program  = specperl /home/xb/spec/Docs/sysinfo
+table            = 1
+teeout           = yes
+teerunout        = yes
+test_date        = Dec-2016
+top              = /home/xb/spec
+train_with       = train
+tune             = base
+uid              = 1000
+unbuffer         = 1
+update-flags     = 0
+use_submit_for_speed = 0
+username         = xb
+vendor           = anon
+vendor_makefiles = 0
+verbose          = 5
+version          = 0
+version_url      = http://www.spec.org/auto/cpu2006/current_version
+worklist         = list
+OUTPUT_RMFILES   = rand.3.out
+  Compile for '998.specrand' started at: Sat Dec  3 22:01:50 2016 (1480820510)
+Issuing make.clean command 'specmake -j20 clean'
+specmake -j20 clean 2> make.clean.err | tee make.clean.out
+Start make.clean command: Sat Dec  3 22:01:50 2016 (1480820510)
+rm -rf *.o  rand.3.out
+find . \( -name \*.o -o -name '*.fppized.f*' -o -name '*.i' -o -name '*.mod' \) -print | xargs rm -rf
+rm -rf specrand
+rm -rf specrand.exe
+rm -rf core
+rm -rf 
+Stop make.clean command: Sat Dec  3 22:01:50 2016 (1480820510)
+Elapsed time for make.clean command: 00:00:00 (0)
+Issuing make command 'specmake -j20 build'
+specmake -j20 build 2> make.err | tee make.out
+Start make command: Sat Dec  3 22:01:50 2016 (1480820510)
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o main.o -DSPEC_CPU -DNDEBUG    -O3       -DSPEC_CPU_LP64         main.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o specrand.o -DSPEC_CPU -DNDEBUG    -O3       -DSPEC_CPU_LP64         specrand.c
+gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native   -O3  -DSPEC_CPU_LP64        main.o specrand.o                     -o specrand
+Stop make command: Sat Dec  3 22:01:51 2016 (1480820511)
+Elapsed time for make command: 00:00:01 (1)
+Issuing options command 'specmake -j20 options'
+specmake -j20 options 2> options.err | tee options.out
+Start options command: Sat Dec  3 22:01:51 2016 (1480820511)
+COMP: gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native -c -o options.o -DSPEC_CPU -DNDEBUG    -O3       -DSPEC_CPU_LP64         <source>
+C: CC="gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC_CPU -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_CFLAGS=""
+O: OPTIMIZE=""
+O: COPTIMIZE="-O3"
+P

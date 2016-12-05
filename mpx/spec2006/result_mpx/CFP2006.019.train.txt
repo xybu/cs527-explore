@@ -1,0 +1,224 @@
+##############################################################################
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+#                                                                            #
+# 'reportable' flag not set during run                                       #
+# 465.tonto (base) did not have enough runs!                                 #
+# 453.povray (base) did not have enough runs!                                #
+# 444.namd (base) did not have enough runs!                                  #
+# 416.gamess (base) did not have enough runs!                                #
+# 436.cactusADM (base) did not have enough runs!                             #
+# 459.GemsFDTD (base) did not have enough runs!                              #
+# 450.soplex (base) did not have enough runs!                                #
+# 437.leslie3d (base) did not have enough runs!                              #
+# 447.dealII (base) did not have enough runs!                                #
+# 481.wrf (base) did not have enough runs!                                   #
+# 433.milc (base) did not have enough runs!                                  #
+# 410.bwaves (base) did not have enough runs!                                #
+# 435.gromacs (base) did not have enough runs!                               #
+# 482.sphinx3 (base) did not have enough runs!                               #
+# 434.zeusmp (base) did not have enough runs!                                #
+# 470.lbm (base) did not have enough runs!                                   #
+# 454.calculix (base) did not have enough runs!                              #
+# Input set must be 'ref' for a valid run (set to 'train' for this run)      #
+# Unknown flags were used! See                                               #
+#      http://www.spec.org/cpu2006/Docs/runspec.html#flagsurl                #
+# for information about how to get rid of this error.                        #
+#                                                                            #
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+##############################################################################
+                           SPEC(R) CFP2006 Summary
+                                    -- --
+                           Sun Dec  4 05:43:52 2016
+
+CPU2006 License: --                                      Test date: Dec-2016
+Test sponsor: --                             Hardware availability: --      
+Tested by:    --                             Software availability: --      
+
+                                  Estimated                       Estimated
+                Base     Base       Base        Peak     Peak       Peak
+Benchmarks      Ref.   Run Time     Ratio       Ref.   Run Time     Ratio
+-------------- ------  ---------  ---------    ------  ---------  ---------
+410.bwaves                                  NR                                 
+416.gamess                                  NR                                 
+433.milc           --      14.3          -- S                                  
+434.zeusmp                                  NR                                 
+435.gromacs                                 NR                                 
+436.cactusADM                               NR                                 
+437.leslie3d                                NR                                 
+444.namd                                    NR                                 
+447.dealII                                  NR                                 
+450.soplex                                  NR                                 
+453.povray                                  NR                                 
+454.calculix                                NR                                 
+459.GemsFDTD                                NR                                 
+465.tonto                                   NR                                 
+470.lbm            --      21.0          -- S                                  
+481.wrf                                     NR                                 
+482.sphinx3        --       7.98         -- S                                  
+==============================================================================
+410.bwaves                                  NR                                 
+416.gamess                                  NR                                 
+433.milc           --      14.3          -- S                                  
+434.zeusmp                                  NR                                 
+435.gromacs                                 NR                                 
+436.cactusADM                               NR                                 
+437.leslie3d                                NR                                 
+444.namd                                    NR                                 
+447.dealII                                  NR                                 
+450.soplex                                  NR                                 
+453.povray                                  NR                                 
+454.calculix                                NR                                 
+459.GemsFDTD                                NR                                 
+465.tonto                                   NR                                 
+470.lbm            --      21.0          -- S                                  
+481.wrf                                     NR                                 
+482.sphinx3        --       7.98         -- S                                  
+ Est. SPECfp(R)_base2006                 --
+ Est. SPECfp2006                                                    Not Run
+
+
+                                   HARDWARE
+                                   --------
+            CPU Name: Intel Core i7-6700K
+ CPU Characteristics:  
+             CPU MHz: --
+                 FPU: --
+      CPU(s) enabled: -1 cores, 1 chip, -1 cores/chip, -1 threads/core
+    CPU(s) orderable: --
+       Primary Cache: --
+     Secondary Cache: --
+            L3 Cache: --
+         Other Cache: --
+              Memory: 60.614 GB fixme: If using DDR3, format is:
+                      'N GB (M x N GB nRxn PCn-nnnnnR-n, ECC)'
+      Disk Subsystem: 357 GB  add more disk info here
+      Other Hardware: --
+
+
+                                   SOFTWARE
+                                   --------
+    Operating System: Ubuntu 16.10
+                      4.8.0-27-generic
+            Compiler: --
+       Auto Parallel: No
+         File System: ext4
+        System State: Run level 5 (add definition here)
+       Base Pointers: --
+       Peak Pointers: Not Applicable
+      Other Software: --
+
+
+                                Platform Notes
+                                --------------
+     Sysinfo program /home/xb/spec/Docs/sysinfo
+     $Rev: 6775 $ $Date:: 2011-08-16 #$ 8787f7622badcf24e01c368b1db4377c
+     running on giga Sun Dec  4 05:43:53 2016
+    
+     This section contains SUT (System Under Test) info as seen by
+     some common utilities.  To remove or add to this section, see:
+       http://www.spec.org/cpu2006/Docs/config.html#sysinfo
+    
+     From /proc/cpuinfo
+        model name : Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz
+           1 "physical id"s (chips)
+           8 "processors"
+        cores, siblings (Caution: counting these is hw and system dependent.  The
+        following excerpts from /proc/cpuinfo might not be reliable.  Use with
+        caution.)
+           cpu cores : 4
+           siblings  : 8
+           physical 0: cores 0 1 2 3
+        cache size : 8192 KB
+    
+     From /proc/meminfo
+        MemTotal:       63558700 kB
+        HugePages_Total:       0
+        Hugepagesize:       2048 kB
+    
+     /usr/bin/lsb_release -d
+        Ubuntu 16.10
+    
+     From /etc/*release* /etc/*version*
+        debian_version: stretch/sid
+        os-release:
+           NAME="Ubuntu"
+           VERSION="16.10 (Yakkety Yak)"
+           ID=ubuntu
+           ID_LIKE=debian
+           PRETTY_NAME="Ubuntu 16.10"
+           VERSION_ID="16.10"
+           HOME_URL="http://www.ubuntu.com/"
+           SUPPORT_URL="http://help.ubuntu.com/"
+    
+     uname -a:
+        Linux giga 4.8.0-27-generic #29-Ubuntu SMP Thu Oct 20 21:03:13 UTC 2016
+        x86_64 x86_64 x86_64 GNU/Linux
+    
+     run-level 5 Dec 1 21:13
+    
+     SPEC is set to: /home/xb/spec
+        Filesystem     Type  Size  Used Avail Use% Mounted on
+        /dev/sda5      ext4  357G  215G  125G  64% /
+    
+     (End of data from sysinfo program)
+
+                              Base Unknown Flags
+                              ------------------
+    433.milc: "gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native" (in CC)
+              "gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native" (in LD)
+              "-O3" (in COPTIMIZE)
+
+     470.lbm: "gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native" (in CC)
+              "gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native" (in LD)
+              "-O3" (in COPTIMIZE)
+
+ 482.sphinx3: "gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native" (in CC)
+              "gcc    -std=gnu89 -mmpx -fcheck-pointer-bounds -static-libmpx -static-libmpxwrappers -lmpx -m64 -g -march=native" (in LD)
+              "-O3" (in COPTIMIZE)
+
+
+                            Base Portability Flags
+                            ----------------------
+    433.milc: -DSPEC_CPU_LP64
+     470.lbm: -DSPEC_CPU_LP64
+ 482.sphinx3: -DSPEC_CPU_LP64
+
+
+    SPEC and SPECfp are registered trademarks of the Standard Performance
+    Evaluation Corporation.  All other brand and product names appearing
+    in this result are trademarks or registered trademarks of their
+    respective holders.
+##############################################################################
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+#                                                                            #
+# 'reportable' flag not set during run                                       #
+# 465.tonto (base) did not have enough runs!                                 #
+# 453.povray (base) did not have enough runs!                                #
+# 444.namd (base) did not have enough runs!                                  #
+# 416.gamess (base) did not have enough runs!                                #
+# 436.cactusADM (base) did not have enough runs!                             #
+# 459.GemsFDTD (base) did not have enough runs!                              #
+# 450.soplex (base) did not have enough runs!                                #
+# 437.leslie3d (base) did not have enough runs!                              #
+# 447.dealII (base) did not have enough runs!                                #
+# 481.wrf (base) did not have enough runs!                                   #
+# 433.milc (base) did not have enough runs!                                  #
+# 410.bwaves (base) did not have enough runs!                                #
+# 435.gromacs (base) did not have enough runs!                               #
+# 482.sphinx3 (base) did not have enough runs!                               #
+# 434.zeusmp (base) did not have enough runs!                                #
+# 470.lbm (base) did not have enough runs!                                   #
+# 454.calculix (base) did not have enough runs!                              #
+# Input set must be 'ref' for a valid run (set to 'train' for this run)      #
+# Unknown flags were used! See                                               #
+#      http://www.spec.org/cpu2006/Docs/runspec.html#flagsurl                #
+# for information about how to get rid of this error.                        #
+#                                                                            #
+#   INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN -- INVALID RUN  #
+##############################################################################
+-----------------------------------------------------------------------------
+For questions about this result, please contact the tester.
+For other inquiries, please contact webmaster@spec.org.
+Copyright 2006-2016 Standard Performance Evaluation Corporation
+Tested with SPEC CPU2006 v1.2.
+Report generated on Sun Dec  4 12:56:48 2016 by CPU2006 ASCII formatter v6400.
